@@ -1,0 +1,360 @@
+
+.main {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  p {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .leftdashboard {
+    background-color: rgba(18, 63, 97, 1);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    min-height: 95vh;
+
+  }
+  
+  .leftdashboard p {
+    font-size: 35px;
+  }
+  
+  .logoimg{
+    height: 120px;
+    width: 80%;
+    border-radius: 30%;
+    margin-left: 10%;
+
+  }
+
+  .leftdashboardbuttons {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+  }
+  
+  .leftdashboardbuttons label {
+    display: flex;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    margin-top: 5%;
+    width: 85%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .leftdashboardbuttons button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .leftdashboardbuttons label:hover,
+  .leftdashboardbuttonsbottom label:hover {
+    background-color: rgba(186, 178, 178, 0.55);
+    border-radius: 0.5rem;
+  }
+  
+  .leftdashboardbuttonsbottom {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+  }
+  
+  .leftdashboardbuttonsbottom label {
+    display: flex;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    margin-top: 5%;
+    width: 80%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .buttonsintheleft{
+    width: 100%
+  }
+  
+  .logoutbutton button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .leftdashboard img {
+    margin-right: 5%;
+  }
+  
+
+  .leftdashboardbuttons label.active,
+  .leftdashboardbuttonsbottom label.active {
+    background-color: rgba(33, 150, 243, 1);
+    color: white;
+    border-radius: 0.5rem;
+  }
+  
+  .leftdashboardbuttons label.active img,
+  .leftdashboardbuttonsbottom label.active img {
+    filter: brightness(0) invert(1);
+  }
+  
+
+  .innerrightdashboard {
+    padding-top: 2%;
+    padding-left: 3%;
+  }
+  
+  .dashboardpage {
+    display: block;
+    width: 500px;
+    text-align: left;
+  }
+  
+  .innerrightdashboardtop {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bluedashboard {
+    color: rgba(33, 150, 243, 1);
+  }
+  
+  .dashboardpagetop {
+    color: rgba(33, 150, 243, 1);
+  }
+  
+  .dashboardanimalcount {
+    display: flex;
+    color: white;
+    height: 150px;
+    width: 100%;
+  }
+  
+  .dashboardanimalcount span {
+    font-size: 40px;
+  }
+  
+  .innerdashboardanimalcount {
+    background-color: rgba(33, 150, 243, 1);
+    color: black;
+    margin-right: 1%;
+    width: 532px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.3rem;
+  }
+  
+  .innerdashboardanimalcount p {
+    display: flex;
+    justify-content: left;
+    margin-top: 2%;
+    margin-bottom: 0%;
+  }
+  
+  .innerdashboardanimalcounttexts {
+    padding-top: 3%;
+    padding-left: 5%;
+  }
+  
+  .innerdashboardanimalcount2 {
+    background-color: rgba(33, 150, 243, 0.03);
+    color: black;
+    width: 532px;
+    border-radius: 0.3rem;
+  }
+  
+  .innerdashboardanimalcount2 p {
+    display: flex;
+    justify-content: left;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    color: black;
+  }
+  
+  .innerdashboardanimalcount2texts {
+    padding-top: 3%;
+    padding-left: 5%;
+  }
+  
+  .dashboardchart {
+    width: 100%;
+    height: 200px;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Animalcharttable-top button {
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .Animalcharttable h2 {
+    color: rgba(33, 150, 243, 1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .Animalcharttable table {
+    width: 100%;
+    border: 1px solid transparent;
+    border-collapse: collapse;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 3%;
+  }
+  
+  .Animalcharttable th {
+    width: 1064px;
+    background-color: rgba(196, 196, 196, 0.4);
+  }
+  
+  .Animalcharttable tr {
+    width: 1064px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid rgba(229, 229, 229, 1);
+    background-color: white;
+  }
+  
+  .Animalcharttable-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .dashboardtopright img{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  .mobilemenubutton{
+    display: none;
+  }
+
+  .nav-toggle {
+    display: none;
+    background-color: rgba(33, 150, 243, 1);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .leftdashboard.open {
+    transform: translateX(0);
+  }
+
+  @media (max-width: 768px) {
+    body, html {
+      overflow-x: hidden;
+  }
+    .main{
+      display: flex;
+      flex-direction: column;
+      width: 97%;
+    }
+
+    .leftdashboard {
+      display: none; /* Ensures it's hidden initially */
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 100%;
+      z-index: 1000;
+      background-color: rgba(18, 63, 97, 1);
+    }
+  
+    .leftdashboard.open {
+      display: block; /* Shows when open class is applied */
+      transform: translateX(0);
+    }
+
+    .mobilemenubutton{
+      display: block;
+      width: 20%;
+      height: 50px;
+      margin: 2%;
+      background-color: transparent;
+      border: none;
+    }
+
+    .innerrightdashboard{
+      width: 135%;
+      min-height: 400px;
+    }
+    
+    .innerdashboardanimalcount{
+      width: 48%;
+      text-align: center;
+    }
+
+    .innerdashboardanimalcount2{
+      width: 48%;
+      text-align: center;
+    }
+
+    .dashboardchart{
+      height: 100%;
+    
+    }
+
+    .dashboardchart img{
+      width: 48%;
+      height: 100%;
+  }
+
+  .dashboardtopright{
+    display: none;
+  }
+
+  .dashboardtopleft{
+    width: 100%;
+  }
+
+  .Animalcharttable{
+    width: 100%;
+
+  }
+
+  .Animalcharttable-top table{
+    width: 100%;
+    font-size: 15px;
+  }
+
+
+  }
+  
+  
+  
+
+  

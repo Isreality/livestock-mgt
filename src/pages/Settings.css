@@ -1,0 +1,153 @@
+.Settings {
+  width: 100%;
+  margin-left: 3%;
+  height: 100vh;
+}
+
+.user-info {
+  margin-top: 10%;
+  max-width: 100%;
+  border: 4px #E5E5E5 solid;
+}
+
+.user-info h3{
+  font-weight: lighter;
+}
+
+.user-info img{
+  padding-right: 20px;
+  height: 60px;
+  width: 60px;
+}
+
+.edit-profile-head{
+margin-bottom: 3rem;
+}
+
+.edit-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 3%;
+  
+}
+.edit-profile-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.edit-profile-right button{
+  background: rgba(33, 150, 243, 1);
+  height: 50px;
+  width: 250px;
+  font-size: 24px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 5%;
+}
+
+.edit-profile-right button img{
+  height: 20px;
+  width: 20px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3%;
+  height: 80px;
+  width: 90%;
+}
+
+.user-profile-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-image{
+  width: 70px;
+  margin-right: 15px;
+}
+
+.username{
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color:#2196F3;
+  ;
+}
+.username-,.name{
+  font-size: 18px;
+  color: #8B8B8B;
+}
+
+.edit-profile-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1DA1F2; 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+.edit-profile-button img {
+  margin-right: 10px;
+}
+
+.name-icon{
+  width: 35px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Settings{
+    width: 135%;
+  }
+
+  .edit-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+  }
+
+  .username{
+    font-size: 20px;
+  }
+
+  .user-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+    padding-bottom: 10%;
+
+  }
+
+
+
+
+
+
+
+}
+

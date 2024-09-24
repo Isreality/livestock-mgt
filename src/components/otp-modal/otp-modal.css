@@ -1,0 +1,112 @@
+.otp-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.otp-modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.otp-inputs input {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.verify-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.verify-btn:disabled {
+  background-color: #007bff80;
+  cursor: not-allowed;
+}
+
+.resend-text {
+  margin-top: 20px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.timer {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Success Modal Styles */
+.success-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.success-modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+}
+
+.check-icon {
+  margin: 20px 0;
+}
+
+.proceed-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}

@@ -1,0 +1,371 @@
+.Appointments {
+  width: 100%;
+  margin-left: 3%;
+  height: 900px;
+}
+
+.innerrightAppointmentstop {
+  margin-top: 1%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.Appointmentstopright {
+  display: flex;
+  flex-direction: row;
+  margin-left: -30%;
+}
+
+.Appointmentstopright img {
+  height: 50px;
+  gap: 1%;
+}
+
+.blueAppointments {
+  color: rgba(33, 150, 243, 1);
+}
+
+.Appointmentspagetop {
+  color: rgba(33, 150, 243, 1);
+}
+
+.Appointmenthealthtop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Appointmentspage h2 {
+  margin-bottom: 0%;
+}
+
+.Appointmenthealth {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+
+.Appoinmentsbody {
+  border: rgba(128, 128, 128, 0.36) solid 3px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 2%;
+  color: black;
+  width: 95%;
+  margin-top: 22%;
+}
+
+.date-picker-container {
+  margin-top: 20px;
+  width: 90%;
+}
+
+.react-datepicker-popper {
+  margin-left: -300px;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 95%;
+  height: 30px;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.date-picker {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.date-picker-container input{
+  margin-top: 0;
+}
+
+.Appoinmentsbody h2{
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.timeslots {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row: 1fr 1fr;
+  width: 100%;
+  height: 150px;
+  font-size: 30px;
+}
+
+.timeslots button {
+  font-size: 20px;
+  color: rgba(100, 100, 100, 1);
+  border: none;
+}
+
+.timeslots button:hover {
+  border: rgb(41, 161, 209) solid 2px;
+  background-color: rgb(85, 85, 189);
+  border-radius: 5rem solid rgb(41, 161, 209);
+}
+
+.timeslot1 {
+  display: grid;
+  grid-row: 1;
+  grid-column: 1;
+  margin: 1.5%;
+}
+.timeslot2 {
+  display: grid;
+  grid-row: 1;
+  grid-column: 2;
+  margin: 1.5%;
+}
+.timeslot3 {
+  display: grid;
+  grid-row: 1;
+  grid-column: 3;
+  margin: 1.5%;
+}
+.timeslot4 {
+  display: grid;
+  grid-row: 1;
+  grid-column: 4;
+  margin: 1.5%;
+}
+.timeslot5 {
+  display: grid;
+  grid-row: 2;
+  grid-column: 1;
+  margin: 1.5%;
+}
+.timeslot6 {
+  display: grid;
+  grid-row: 2;
+  grid-column: 2;
+  margin: 1.5%;
+}
+.timeslot7 {
+  display: grid;
+  grid-row: 2;
+  grid-column: 3;
+  margin: 1.5%;
+}
+.timeslot8 {
+  display: grid;
+  grid-row: 2;
+  grid-column: 4;
+  margin: 1.5%;
+}
+
+.reminder-dropdown-container {
+  margin-top: 10px;
+
+}
+
+.reminder-dropdown {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Satoshi", sans-serif;
+}
+
+.reminder-dropdown-container select {
+  margin: 0;
+  height: 50px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.reminder-dropdown-container select:hover {
+  border: black solid 1px;
+}
+
+.meeting-mode {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.mode {
+  width: 250px;
+  height: 80px;
+  border-radius: transparent 5px;
+  font-size: 18px;
+  margin-right: 20px;
+  padding: 15px 0;
+  font-size: 20px;
+  color: rgba(100, 100, 100, 1);
+  border: none;
+}
+.mode :hover{
+  border: rgb(41, 161, 209) solid 2px;
+}
+
+/* .submit-btn{
+  text-wrap:nowrap;
+} */
+
+.mode .selected{
+  width: 250px;
+  height: 40px;
+  border-radius: transparent 5px;
+  font-size: 18px;
+}
+
+.mode {
+  width: 250px;
+  height: 70px;
+  border-radius: transparent 5px;
+  font-size: 18px;
+}
+
+.Appointmentspagetop{
+  margin-bottom: 4rem;
+}
+
+
+.modeofmeeting button:hover {
+  background-color: rgba(33, 150, 243, 1);
+  outline: transparent;
+  border: transparent;
+  border-radius: 5px;
+}
+
+.bookappoinment {
+  display: block;
+  width: 100%;
+  text-align: end;
+}
+
+.bookappoinment button {
+  height: 60px;
+  width: 55%;
+  background-color: rgba(33, 150, 243, 1);
+  color: white;
+  font-size: 18px;
+  outline: rgba(33, 150, 243, 1);
+  border: white solid 2px;
+  border-radius: 5px;
+  margin-top: 35px;
+  cursor: pointer;
+}
+
+.bookappoinment button:hover {
+  border: white solid 2px;
+  background-color: rgb(50, 153, 238);
+  border-radius: 1rem;
+}
+
+.Appointments form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 2%;
+  font-size: 17px;
+  margin-top:0;
+  font-size: 15px;
+}
+
+.appointment-buttom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.timeslots button {
+  font-size: 20px;
+  color: rgba(100, 100, 100, 1);
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.timeslots button:hover {
+  border: rgb(41, 161, 209) solid 2px;
+  background-color: rgb(41, 161, 209);
+
+}
+
+.timeslots button.selected {
+  background-color: rgba(33, 150, 243, 1);
+  color: white;
+  border: rgba(33, 150, 243, 1) solid 2px;
+}
+
+.mode {
+  width: 250px;
+  height: 80px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-right: 20px;
+  padding: 15px 0;
+  font-size: 20px;
+  color: rgba(100, 100, 100, 1);
+  border: none;
+}
+
+.mode:hover {
+  border: rgb(41, 161, 209) solid 2px;
+}
+
+.mode.selected {
+  background-color: rgba(33, 150, 243, 1);
+  color: white;
+  border: rgba(33, 150, 243, 1) solid 2px;
+}
+
+@media (max-width: 768px) {
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Appointments{
+    width: 130%;
+  }
+
+  .Appoinmentsbody{
+    margin-top: 70%;
+    font-size: 13px;
+  }
+
+  .meeting-mode{
+    width: 65%;
+  }
+
+  .bookappoinment button{
+    margin-top: 30%;
+    width: 100%;
+  }
+
+  .react-datepicker-popper {
+    margin-left: 0;
+  }
+
+  .timeslots{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 65px 65px 65px 65px;
+    grid-row: 1fr 1fr;
+    width: 120px;
+    height: 150px;
+    font-size: 20px;
+    margin-bottom: 30%;
+    gap: 0.2rem;
+}
+
+.Appointmentstopright{
+  display: none;
+}
+
+}

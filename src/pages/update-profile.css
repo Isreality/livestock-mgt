@@ -1,0 +1,205 @@
+/* ProfileUpdate.css */
+.profile-update-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .profile-form {
+    background: white;
+    border-radius: 8px;
+    width: 100%;
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    margin: 1rem 3rem;
+    max-width: 800px;
+    border: 4px #E5E5E5 solid;
+    height: 280px;
+  }
+
+  .profile-image-container{
+margin-left: 2.5rem;
+    /* width: 70%; */
+    padding: 2%;
+    font-size: 17px;
+  }
+  .form-info{
+    margin-top: -2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin: auto; */
+    height: inherit;
+    width: 85%;
+    padding:0 2%;
+    font-size: 17px;
+  }
+  .profile-image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .image-upload-label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #007bff;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .image-upload-input {
+    display: none;
+  }
+  
+
+  
+  .input-group label {
+    display: block;
+    /* margin-bottom: 5px; */
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  .input-group input {
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+  }
+  
+  .update-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: right;
+    /* width: 20px; */
+    align-self: flex-end;
+    font-size: 16px;
+  }
+  
+  .update-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* PasswordUpdate.css */
+.password-update-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.password-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+
+.input-group label {
+  display: block;
+  color: #646464;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.toggle-password-visibility {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.update-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 18px;
+}
+
+.update-button:hover {
+  background-color: #0056b3;
+}
+
+.personal-info-header{
+  color:rgba(33, 150, 243, 1);
+  margin: 0;
+}
+
+.rightdashboard{
+  width: 70%;
+  height: auto;
+}
+
+.updateprofilepage{
+  text-align: left;
+
+}
+.blueupdateprofile2{
+  color: #007bff;
+}
+
+.personal-info-header-wrapper{
+  margin: 1rem 3rem;
+  font-size: 12px;
+}
+
+.edit-input{
+  margin: 2px 0;
+  border-color: #e5e5e5;
+}
+
+.input-group-wrapper{
+  display: flex;
+}
+
+.input--group1{
+  width: 49%;
+  margin-right: 1%;
+  
+}
+.input--group2{
+  width: 49%;
+  margin-left: 1%;
+
+}
