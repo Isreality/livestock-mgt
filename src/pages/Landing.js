@@ -8,6 +8,7 @@ import {MdClose} from "react-icons/md";
 import CountUp from 'react-countup';
 import { Fade } from "react-awesome-reveal";
 import { Zoom } from "react-awesome-reveal";
+import { FaArrowUp } from "react-icons/fa";
 import Cat from "../images/Cat.png"
 import LandingPig from "../images/LandingpagePig.png";
 import landingdog from "../images/big dog.png";
@@ -33,10 +34,31 @@ import menuicon from "../images/dashboardmenuitem.png"
 
 const Landing = () => {
   const [showNav1, setShowNav1] = useState(false);
+  const [visible, setVisible] = useState(false);
+  
   const toggleNav1 = () => {
     setShowNav1(!showNav1);
     console.log('button clicked', showNav1)
   };
+
+  const toggleVisible = () => { 
+    const scrolled = document.documentElement.scrollTop; 
+    if (scrolled > 300){ 
+    setVisible(true) 
+    }  
+    else if (scrolled <= 300){ 
+    setVisible(false) 
+    } 
+}; 
+
+const handleClick = () =>{
+    window.scroll({
+        top:0,
+        behavior: "smooth"
+    })
+}
+
+window.addEventListener('scroll', toggleVisible);
 
   return (
     <div className='landing-page'>
@@ -52,7 +74,7 @@ const Landing = () => {
                 <div>
                     <div className="fixed h-full w-screen right-0 -translate-x-0 transition-all">
                         <div className="flex bg-white flex-col absolute right-0 top-0 h-screen p-8 gap-2 z-[100] w-40">
-                          <div className='text-md p-2'>
+                          {/* <div className='text-md p-2'>
                             Home
                           </div>
 
@@ -66,7 +88,7 @@ const Landing = () => {
 
                           <HashLink smooth to="#thirdpage" className='text-md p-2'>
                             Contact
-                          </HashLink>
+                          </HashLink> */}
 
                           <Link to="/signup">
                             <button className='bg-primary text-sm text-white border-primary font-medium px-4 py-2 rounded-md'>Sign Up</button>
@@ -147,6 +169,9 @@ const Landing = () => {
           </Fade>
         </div>
       </div>
+
+      {/* Back to top button */}
+      <FaArrowUp onClick={() => handleClick()} style={{display: visible ? 'inline' : 'none'}} className="fixed bg-primary rounded-full text-3xl text-white cursor-pointer z-10 p-8 w-24 h-24 bottom-5 right-5 hover:bg-transparent hover:text-primary hover:border-primary hover:border-2"/>
 
       {/* Stats */}
       <div className='secondpage w-full mt-24'>
