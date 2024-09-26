@@ -227,31 +227,39 @@ const Landing = () => {
               </Fade>
 
               <div className='keylists1 flex flex-row items-center gap-2'>
-                <Fade direction="right" triggerOnce="true">
+                {/* <Fade direction="left" triggerOnce="true"> */}
                   <img src={keylist1} alt="chart" />
-                  <p className="text-md text-black text-left md:text-lg">Real-Time Temperature Monitoring</p>
-                </Fade>
+                {/* </Fade> */}
+                {/* <Fade direction="right" triggerOnce="true"> */}
+                  <p className="text-sm text-black text-left md:text-lg">Real-Time Temperature Monitoring</p>
+                {/* </Fade> */}
               </div><br/>
 
               <div className='keylists1 flex flex-row items-center gap-2'>
-                <Fade direction="right" triggerOnce="true">
+                {/* <Fade direction="left" triggerOnce="true"> */}
                   <img src={keylist2} alt="chart" />
-                  <p className="text-md text-black text-left md:text-lg">Continuous health tracking with instant alerts for abnormal temperature readings.</p>
-                </Fade>
+                {/* </Fade> */}
+                {/* <Fade direction="right" triggerOnce="true"> */}
+                  <p className="text-sm text-black text-left md:text-lg">Continuous health tracking with instant alerts for abnormal temperature readings.</p>
+                {/* </Fade> */}
               </div><br/>
 
               <div className='keylists1 flex flex-row items-center gap-2'>
-                <Fade direction="right" triggerOnce="true">
+                {/* <Fade direction="left" triggerOnce="true"> */}
                   <img src={keylist3} alt="chart" />
-                  <p className="text-md text-black text-left md:text-lg">Easy-to-use dashboard for quick insights into your herd's health status.</p>
-                </Fade>
+                {/* </Fade> */}
+                {/* <Fade direction="right" triggerOnce="true"> */}
+                  <p className="text-sm text-black text-left md:text-lg">Easy-to-use dashboard for quick insights into your herd's health status.</p>
+                {/* </Fade> */}
               </div><br/>
 
               <div className='keylists1 flex flex-row items-center gap-2'>
-                <Fade direction="right" triggerOnce="true">
+                {/* <Fade direction="left" triggerOnce="true"> */}
                   <img src={keylist4} alt="chart" />
-                  <p className="text-md text-black text-left md:text-lg">Vet Appointment Scheduling</p>
-                </Fade>
+                {/* </Fade> */}
+                {/* <Fade direction="right" triggerOnce="true"> */}
+                  <p className="text-sm text-black text-left md:text-lg">Vet Appointment Scheduling</p>
+                {/* </Fade> */}
               </div>
             </div>
           </div>
