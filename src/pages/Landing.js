@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {MdClose} from "react-icons/md";
+import CountUp from 'react-countup';
+import { Fade } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 import Cat from "../images/Cat.png"
 import LandingPig from "../images/LandingpagePig.png";
 import landingdog from "../images/big dog.png";
@@ -112,25 +115,36 @@ const Landing = () => {
       </div>
 
       <div className='firstpage px-4 md:px-6'>
+        
         <div className='firstpage-left'>
           <div className="flex flex-row gap-1 justify-center md:justify-start items-center">
-            <img src={landingdog} alt="dog" />
-            <img src={LandingPig} alt="chart" />
+            <Fade direction="down" triggerOnce="true">
+              <img src={landingdog} alt="dog"/>
+              <img src={LandingPig} alt="chart"/>
+            </Fade>
           </div>
           <div>
-            <h1 className="text-4xl text-center md:text-left">Monitor your Animals with our <span className="text-primary">Intuitive Web Application</span></h1>
-            <h4 className="text-md md:text-md text-center md:text-left">We provide detailed health reports to help you make informed decisions about 
-                your livestock, identify trends and prevent future health issues.
-            </h4>
+            <Fade direction="left" triggerOnce="true">
+              <h1 className="text-4xl text-center md:text-left">Monitor your Animals with our <span className="text-primary">Intuitive Web Application</span></h1>
+              <h4 className="text-md md:text-md text-center md:text-left">We provide detailed health reports to help you make informed decisions about 
+                  your livestock, identify trends and prevent future health issues.
+              </h4>
+              </Fade>
           </div>
           <div>
             <Link to="/signup">
+              <Fade direction="up" triggerOnce="true">
               <button className="bg-primary">Get Started</button>
+              </Fade>
             </Link>
           </div>
         </div>
+
+        {/* Cat image */}
         <div className='firstpage-right mb-24'>
-          <img src={Cat} alt="chart" className="flex h-[300px] md:h-[500px] w-[500px] md:w-full object-cover rounded-lg md:rounded-3xl" />
+          <Fade direction="right" triggerOnce="true">
+            <img src={Cat} alt="chart" className="flex h-[300px] md:h-[500px] w-[500px] md:w-full object-cover rounded-lg md:rounded-3xl" />
+          </Fade>
         </div>
       </div>
 
@@ -141,7 +155,7 @@ const Landing = () => {
             <img src={userimg} alt="chart" />
           </div>
           <div className="text-left gap-1">
-            <h2 className="text-4xl text-white font-bold">100+</h2>
+            <h2 className="text-4xl text-white font-bold"><CountUp start={0} end={100} duration={8}/>+</h2>
             <h4 className="text-2xl  text-white">Users</h4>
           </div>
         </div>
@@ -151,7 +165,7 @@ const Landing = () => {
             <img src={paws} alt="chart" />
           </div>
           <div className='secondpage21 text-left gap-1'>
-            <h2 className="text-4xl text-left text-white font-bold">200+</h2>
+            <h2 className="text-4xl text-left text-white font-bold"><CountUp start={0} end={200} duration={8}/>+</h2>
             <h4 className="text-2xl text-left  text-white">Specie Distribution</h4>
           </div>
         </div>
@@ -161,7 +175,7 @@ const Landing = () => {
             <img src={paws} alt="chart" />
           </div>
           <div className='secondpage31 text-left gap-1'>
-            <h2 className="text-4xl text-left text-white font-bold">200+</h2>
+            <h2 className="text-4xl text-left text-white font-bold"><CountUp start={0} end={200} duration={8}/>+</h2>
             <h4 className="text-2xl text-left  text-white">Specie Distribution</h4>
           </div>
         </div>
@@ -170,22 +184,28 @@ const Landing = () => {
       {/* WHy Choose our system */}
       <div id='thirdpage' className='thirdpage px-4 md:px-24 py:24 mt-16 mb-8'>
         <div>
+          <Fade direction="down" triggerOnce="true">
           <h1 className="text-3xl md:text-4xl font-medium mb-4">Why Choose our <span className="font-bold">System?</span></h1>
+          </Fade>
         </div>
         <div className="">
           <div className='thirdpage-img'>
+            <Fade triggerOnce="true">
             <img src={rabbit} className="object-cover w-full h-full md:h-[500px] rounded-xl mb-4" alt="chart" />
+            </Fade>
           </div>
 
           {/* Overlay */}
           {/* <div class="absolute inset-0 flex mt-9 bg-black bg-opacity-40 md:h-[500px] object-cover rounded-xl"></div> */}
 
           <div className='thirdpage-words'>
-            <h4 className="text-md md:text-xl text-black text-justify font-normal">
-              We understand the critical importance of maintaining the health and well-being of your livestock. 
-              Our innovative health monitoring system uses real-time temperature tracking to ensure your animals 
-              are always at their best.
-            </h4>
+            <Fade direction="up" triggerOnce="true">
+              <h4 className="text-md md:text-xl text-black text-justify font-normal">
+                We understand the critical importance of maintaining the health and well-being of your livestock. 
+                Our innovative health monitoring system uses real-time temperature tracking to ensure your animals 
+                are always at their best.
+              </h4>
+            </Fade>
           </div>
         </div>  
       </div>
@@ -195,29 +215,43 @@ const Landing = () => {
       
         <div className='fourthpage-wrapper'>
           <div className='fourthpage-img'>
-            <img src={landingdog} alt="chart" />
+            <Fade direction="left" triggerOnce="true">
+              <img src={landingdog} alt="chart" />
+            </Fade>
           </div>
+
           <div className='fourthpage-right'>
             <div className='keylists'>
+              <Fade direction="right" triggerOnce="true">
               <h1 className="text-3xl md:text-4xl font-medium">Key <span className="font-bold">Features</span></h1><br/>
+              </Fade>
+
               <div className='keylists1 flex flex-row items-center gap-2'>
-                <img src={keylist1} alt="chart" />
-                <p className="text-md text-black text-left md:text-lg">Real-Time Temperature Monitoring</p>
+                <Fade direction="right" triggerOnce="true">
+                  <img src={keylist1} alt="chart" />
+                  <p className="text-md text-black text-left md:text-lg">Real-Time Temperature Monitoring</p>
+                </Fade>
               </div><br/>
 
               <div className='keylists1 flex flex-row items-center gap-2'>
-                <img src={keylist2} alt="chart" />
-                <p className="text-md text-black text-left md:text-lg">Continuous health tracking with instant alerts for abnormal temperature readings.</p>
+                <Fade direction="right" triggerOnce="true">
+                  <img src={keylist2} alt="chart" />
+                  <p className="text-md text-black text-left md:text-lg">Continuous health tracking with instant alerts for abnormal temperature readings.</p>
+                </Fade>
               </div><br/>
 
               <div className='keylists1 flex flex-row items-center gap-2'>
-                <img src={keylist3} alt="chart" />
-                <p className="text-md text-black text-left md:text-lg">Easy-to-use dashboard for quick insights into your herd's health status.</p>
+                <Fade direction="right" triggerOnce="true">
+                  <img src={keylist3} alt="chart" />
+                  <p className="text-md text-black text-left md:text-lg">Easy-to-use dashboard for quick insights into your herd's health status.</p>
+                </Fade>
               </div><br/>
 
               <div className='keylists1 flex flex-row items-center gap-2'>
-                <img src={keylist4} alt="chart" />
-                <p className="text-md text-black text-left md:text-lg">Vet Appointment Scheduling</p>
+                <Fade direction="right" triggerOnce="true">
+                  <img src={keylist4} alt="chart" />
+                  <p className="text-md text-black text-left md:text-lg">Vet Appointment Scheduling</p>
+                </Fade>
               </div>
             </div>
           </div>
@@ -229,36 +263,48 @@ const Landing = () => {
         <h1 className="text-4xl font-medium text-center mb-8">How it <span className=" text-primary font-bold">Works</span></h1>
         <div className='fifthpage-grid grid grid-cols-1 md:grid-cols-2 gap-10'>
           <div className='grid1 gap-3'>
-            <img src={grid1} alt="chart" className="mb-2"/>
-            <h2 className="text-2xl text-left font-bold text-primary mb-1">Attach Sensor</h2>
-            <h1 className="text-md text-left">Easily attach our temperature sensor to your animal.</h1>
+            <Fade triggerOnce="true">
+              <img src={grid1} alt="chart" className="mb-2"/>
+              <h2 className="text-2xl text-left font-bold text-primary mb-1">Attach Sensor</h2>
+              <h1 className="text-md text-left">Easily attach our temperature sensor to your animal.</h1>
+            </Fade>
           </div>
 
           <div className='grid2 gap-2'>
-            <img src={grid2} alt="chart" className="mb-2"/>
-            <h2 className="text-2xl text-left font-bold text-primary mb-1">Monitor Health</h2>
-            <h1 className="text-md text-left">Track your animal’s temperature in real-time through our platform.</h1>
+            <Fade triggerOnce="true">
+              <img src={grid2} alt="chart" className="mb-2"/>
+              <h2 className="text-2xl text-left font-bold text-primary mb-1">Monitor Health</h2>
+              <h1 className="text-md text-left">Track your animal’s temperature in real-time through our platform.</h1>
+            </Fade>
           </div>
 
           <div className='grid3 gap-2'>
-            <img src={grid3} alt="chart" className="mb-2"/>
-            <h2 className="text-2xl text-left font-bold text-primary mb-1">Get Alerts</h2>
-            <h1 className="text-md text-left">Receive instant alerts if any temperature anomalies are detected.</h1>
+            <Fade triggerOnce="true">
+              <img src={grid3} alt="chart" className="mb-2"/>
+              <h2 className="text-2xl text-left font-bold text-primary mb-1">Get Alerts</h2>
+              <h1 className="text-md text-left">Receive instant alerts if any temperature anomalies are detected.</h1>
+            </Fade>
           </div>
 
           <div className='grid4 gap-2'>
-            <img src={grid4} alt="chart" className="mb-2"/>
-            <h2 className="text-2xl text-left font-bold text-primary mb-1">Schedule Visits</h2>
-            <h1 className="text-md text-left">Book appointments with your vet directly through our system.</h1>
+            <Fade triggerOnce="true">
+              <img src={grid4} alt="chart" className="mb-2"/>
+              <h2 className="text-2xl text-left font-bold text-primary mb-1">Schedule Visits</h2>
+              <h1 className="text-md text-left">Book appointments with your vet directly through our system.</h1>
+            </Fade>
           </div>
         </div>
       </div>
 
       <div className='sixthpage-top mb-8 px-4 md:px-24'>
           <div className='sixthinfo gap-4'>
+          <Fade direction="down" triggerOnce="true">
             <h2>Hear how the system has made a difference for farmers just like you.</h2>
+          </Fade>
             <Link to="/signup">
+              <Fade direction="up" triggerOnce="true">
               <button className="endbutton text-primary font-medium">Get Started Today</button>
+              </Fade>
             </Link>
           </div>
        </div>
