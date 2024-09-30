@@ -98,7 +98,7 @@ const Signup = () => {
           <button className="backhomebutton">Homepage</button>
         </Link>
       </div>  */}
-        <div className="flex flex-row signup justify-between gap-20 px-4">
+        <div className="flex flex-row signup justify-between gap-20 px-2">
           <div className="py-20 px-4 md:px-24 space-y-4 sm:m-12 lg:m-0 items-center rounded-lg">
             <div>
               {/* Form */}
