@@ -65,7 +65,7 @@ window.addEventListener('scroll', toggleVisible);
       {/* Navbar */}
       <div className=' w-full flex flex-wrap justify-between px-24 py-4 md:py-6 m-0 z-50 items-center border-primary border-b-2'>
         <div className="flex justify-items-start items-center">
-          <img className="w-[100px] md:w-[150px] object-cover" src={logo} alt="logo"/>
+          <img className="w-[100px] md:w-[130px] object-cover" src={logo} alt="logo"/>
         </div>
         {/* Mobile menu */}
         <div className="md:hidden">

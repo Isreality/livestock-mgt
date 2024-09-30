@@ -98,12 +98,9 @@ const Signup = () => {
           <button className="backhomebutton">Homepage</button>
         </Link>
       </div>  */}
-        <div className="grid grid-cols-2 signup justify-between gap-20 px-4">
-          <div className=" px-24 space-y-4 sm:m-12 lg:m-0 items-center rounded-lg">
+        <div className="flex flex-row signup justify-between gap-20 px-4">
+          <div className="py-20 px-4 md:px-24 space-y-4 sm:m-12 lg:m-0 items-center rounded-lg">
             <div>
-              {/* <img src={logo} alt="logo" className="w-[100px] md:w-[150px] object-cover"/>
-              <div className="signuptop text-primary text-left text-3xl md:text-4xl font-black mb-0 md:mb-2">Create an account</div> */}
-              
               {/* Form */}
               <form onSubmit={handleSignUp} method="" className="grid justify-items-stretch text-left m-auto gap-2">
                 <img src={logo} alt="logo" className="w-[100px] md:w-[150px] object-cover"/>
@@ -164,34 +161,20 @@ const Signup = () => {
                     // className={signUpData.password ? "filled" : ""}
                     className="border-2 p-4 text-md w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
                   />
-                </div>                        
+                </div><br/>                        
 
-                <button
-                  // style={{
-                  //   display: "flex",
-                  //   justifyContent: "center",
-                  //   alignItems: "center",
-                  // }}
-                  type="submit"
-                  className="signupbutton flex w-80 md:w-full mt-4 py-4 px-20 md:px-64 rounded-md border-fa bg-primary cursor-pointer text-white text-md text-left font-bold"
-                  disabled={loading}
-                >
-                  {loading ? (
-                    <ThreeDots
-                      type="ThreeDots"
-                      color="#000"
-                      height={30}
-                      width={30}
-                    />
-                  ) : (
-                    <div>Sign Up</div>
-                  )}
+                {/* Button */}
+                <button type="submit"
+                  className="flex w-80 md:w-full py-4 px-20 md:px-60 rounded-md border-fa bg-primary cursor-pointer text-white text-md justify-center font-medium"
+                  disabled={loading}>
+                    Sign Up
                 </button>
-                <div className=" flex flex-row items-center gap-2 text-center">
-                  <p className="text-black text-md">Already have an account?{" "}</p>
+
+                <div className=" flex flex-row items-center gap-2 text-center text-md">
+                  Already have an account?{" "}
                   <Link to="/Signin" className=" text-primary font-medium text-md">
                     {/* <button type="button" > */}
-                      Sign-In
+                      Sign In
                     {/* </button> */}
                   </Link>
                 </div><br/>

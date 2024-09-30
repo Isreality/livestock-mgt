@@ -71,8 +71,8 @@ const Signin = () => {
           <button className="backhomebutton">Homepage</button>
         </Link>
       </div>*/}
-        <div className="signin grid grid-cols-2 signup gap-20 px-4">
-          <div className="leftsignin px-24  space-y-4 sm:m-12 lg:m-0 items-center rounded-lg">
+        <div className="flex flex-row gap-20 px-4">
+          <div className="py-20 px-4 md:px-24 space-y-4 sm:m-12 lg:m-0 items-center rounded-lg">
             <div>
               <form method="post" onSubmit={handleSignIn} className="grid justify-items-stretch text-left m-auto gap-2">
                 <img src={logo} alt="logo" className="w-[100px] md:w-[150px] object-cover"/>
@@ -104,30 +104,13 @@ const Signin = () => {
                   ></input>
                 </div><br/>
                 
-                  
-                
-                {/* <Link to="/Dashboard"> */}
-                <button
-                  // style={{
-                  //   display: "flex",
-                  //   justifyContent: "center",
-                  //   alignItems: "center",
-                  // }}
-                  type="submit"
-                  className="signinbutton flex w-80 md:w-full mt-4 py-4 px-20 md:px-64 rounded-md border-fa bg-primary cursor-pointer text-white text-md text-left font-bold"
-                  disabled={loading}
-                >
-                  {loading ? (
-                    <ThreeDots
-                      type="ThreeDots"
-                      color="#000"
-                      height={30}
-                      width={30}
-                    />
-                  ) : (
-                    "Sign-In"
-                  )}
+                {/* Button */}
+                <button type="submit"
+                  className="signupbutton flex w-80 md:w-full py-4 px-20 md:px-64 rounded-md border-fa bg-primary cursor-pointer text-white text-md justify-center font-bold"
+                  disabled={loading}>
+                    Sign In
                 </button>
+
                 {/* </Link> */}
                 <div className="signinbottom">
                   Don't have an account?{" "}
@@ -140,7 +123,7 @@ const Signin = () => {
           </div>
 
           <div className="rightsignin hidden md:flex lg:flex">
-            <img src={Cat} alt="dog image" className="w-full h-screen object-cover right-0"/>
+            <img src={Cat} alt="dog image" className="w-full h-screen right-0"/>
           </div>
         </div>
       </div>
