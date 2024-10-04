@@ -17,16 +17,43 @@ const ViewLivestockModal = ({ open, handleClose, livestock }) => {
         <button className="close-button" onClick={handleClose}>
           ×
         </button>
-        <h2>View Livestock Details</h2>
-        <div className="livestock-details">
-          <div>ID: {livestock.animal?.id}</div>
-          <div>Specie: {livestock.animal?.specie}</div>
-          <div>Last Treatment: {livestock.animal?.last_treatment}</div>
-          <div>
-            Status: <span>{livestock.animal?.status}</span>
+        <h2 className="text-2xl text-primary text-center font-semibold mb-4">View Livestock Details</h2>
+        <div className="livestock-details flex flex-col gap-5 text-left text-lg">
+          <div className="flex items-center justify-between">
+            <p>ID</p> 
+            {livestock.animal?.id}
           </div>
-          <div>Disease: {livestock.animal?.disease}</div>
-          <div>Body Temperature: {livestock?.animal?.temperature}°C</div>
+          <hr/>
+
+          <div className="flex items-center justify-between">
+            <p>Specie</p> 
+            {livestock.animal?.specie}
+          </div>
+          <hr/>
+
+          <div className="flex items-center justify-between">
+            <p>Last Treatment</p> 
+            {livestock.animal?.last_treatment}
+          </div>
+          <hr/>
+
+          <div className="flex items-center justify-between">
+            <p>Status</p> 
+            {livestock.animal?.status}
+          </div>
+          <hr/>
+
+          <div className="flex items-center justify-between">
+            <p>Disease</p> 
+            {livestock.animal?.disease}
+          </div>
+          <hr/>
+
+          <div className="flex items-center justify-between">
+            <p>Body Temperature</p> 
+            {livestock?.animal?.temperature}°C
+          </div>
+          <hr/>
         </div>
         <button className="info-button">Disease Information</button>
       </div>

@@ -20,15 +20,15 @@ function App() {
         <ToastContainer />
           <Routes>
             <Route path="/" element={<Landing/>} />
-            <Route path="/Signin" element={<Signin />} />
+            <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/Dashboard" element={<Dashboard/>} />
+            <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/" element={<Signup />} />
-            <Route path="/Dashboard" element={<Dashboard />} />
-            <Route path="/Dashboard/animals" element={<Animals />} />
-            <Route path="/Dashboard/settings" element={<Settings />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/animals" element={<Animals />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="/Dashboard/settings/updateprofile" element={<UpdataProfile />} />
-            <Route path="/Dashboard/appointment" element={<Appointments />} />
+            <Route path="/appointment" element={<Appointments />} />
           </Routes>
         </ToastProvider>
       </BrowserRouter>

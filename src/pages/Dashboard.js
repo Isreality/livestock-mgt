@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Dashboard.css";
+// import "./Dashboard.css";
 import dashboardicon from "../images/dashboard.png";
 import animalicon from "../images/animal.png";
 import settingicon from "../images/settings.png";
@@ -14,7 +14,11 @@ import appointmenticon from "../images/appointment.png";
 import Animals from "./Animals";
 import Appointments from "./Appointments.js";
 import Settings from "./Settings.jsx";
+import { RxCaretRight } from "react-icons/rx";
 import axios from "axios";
+import Sidebar from "../components/sideBar/SideBar";
+import Header from "../components/head/Header";
+import Heading from "../components/head/Heading";
 import ActionButton from "../components/actioButton/ActionButton.jsx";
 import ViewLivestockModal from "../components/viewLivestockModal/ViewLivestockModal.jsx";
 import EditLivestockModal from "../components/editLivestock/EditLivestockModal.jsx";
@@ -70,22 +74,22 @@ const Dashboard = () => {
     }
   };
 
-  const handleViewChange = (view) => {
-    setView(view);
-    if (view === "dashboard") {
-      fetchDashboardData();
-    } else if (view === "animals") {
-      fetchAnimalData();
-    } else if (view === "appointments") {
-      fetchAnimalData();
-    } else if (view === "settings") {
-      fetchAnimalData();
-    }
-  };
+  // const handleViewChange = (view) => {
+  //   setView(view);
+  //   if (view === "dashboard") {
+  //     fetchDashboardData();
+  //   } else if (view === "animals") {
+  //     fetchAnimalData();
+  //   } else if (view === "appointments") {
+  //     fetchAnimalData();
+  //   } else if (view === "settings") {
+  //     fetchAnimalData();
+  //   }
+  // };
 
-  useEffect(() => {
-    handleViewChange(view);
-  }, [view]);
+  // useEffect(() => {
+  //   handleViewChange(view);
+  // }, [view]);
 
   useEffect(() => {
     fetchAnimalData();
@@ -161,11 +165,11 @@ const Dashboard = () => {
 
   return (
     <div className="Dashboard">
-      <div className="main">
-        <button className="mobilemenubutton" onClick={toggleNav}><img src={menuicon} alt="img" /></button>
+      <div className="main flex flex-row">
+        <Sidebar/>
+        {/* <button className="mobilemenubutton" onClick={toggleNav}><img src={menuicon} alt="img" /></button>
         <div className={`leftdashboard ${showNav ? "open" : ""}`}>
           <div className="buttonsintheleft">
-            {/* <img className="logoimg" src={logo} alt="logo" /> */}
             <p>Livestock</p>
             <div className="leftdashboardbuttons">
               <label className={view === "dashboard" ? "active" : ""}>
@@ -202,49 +206,50 @@ const Dashboard = () => {
               </Link>
             </label>
           </div>
-        </div>
-        <div className="rightdashboard">
+        </div> */}
+        <div className="rightdashboard w-full">
           {view === "dashboard" && (
             <div className="innerrightdashboard">
+              {/* Header & Heading */}
               <div className="innerrightdashboardtop">
-                <div className="dashboardtopleft">
-                  <h2 className="dashboardpage">
-                    Home {">"}{" "}
-                    <span className="bluedashboard"> Dashboard</span>
-                  </h2>
-                  <h1 className="dashboardpagetop">Dashboard</h1>
-                </div>
-                <div className="dashboardtopright">
-                  {/* <img src={not} alt="notifications" /> */}
-                  <img src={profile} alt="profile" onClick={() => handleViewChange("settings")}/>
-                </div>
+                <div className="mb-4 items-center"><Header title="Dashboard" link="/dashboard"/></div>
+
+                <div className="px-8">
+                  <div className="mb-4"><Heading title="Dashboard"/></div>
+                </div> 
+
               </div>
-              <div className="dashboardanimalcount">
-                <div className="innerdashboardanimalcount">
+
+              {/* Stats */}
+              <div className="grid lg:grid-cols-2 sm:grid-cols-1 px-8 gap-5 mb-4">
+                <div className="flex flex-col bg-primary rounded-md gap-1 pl-6 pr-20 py-6 text-white">
                   <div className="innerdashboardanimalcounttexts">
                     <img src={dogpaw} alt="img" />
-                    <p>Total No of Animals</p>
-                    <span> {dashboardData?.totalcount} </span>
+                    <p className="text-left font-medium">Total No of Animals</p>
+                    <span className="text-3xl text-left font-medium"> {dashboardData?.totalcount} </span>
                   </div>
                 </div>
-                <div className="innerdashboardanimalcount2">
+                <div className="flex flex-col bg-fa rounded-md gap-1 pl-6 pr-20 py-6 text-black2">
                   <div className="innerdashboardanimalcount2texts">
                     <img src={dogpaw} alt="img" />
-                    <p>Species Distribution</p>
-                    <span>{dashboardData?.specieCount}</span>
+                    <p className="text-left font-medium">Species Distribution</p>
+                    <span className="text-3xl text-left font-medium">{dashboardData?.specieCount}</span>
                   </div>
                 </div>
               </div>
-              <div className="dashboardchart">
-                <img src={chart} alt="chart" />
-                <img src={chart1} alt="chart" />
-              </div>
-              <div className="Animalcharttable">
-                <div className="Animalcharttable-top">
-                  <h2>Livestock</h2>
-                  <button onClick={() => handleViewChange("animals")}>
-                    See all {">"}
-                  </button>
+
+              {/* <div className="flex flex-row gap-3 px-8">
+                <img src={chart} alt="chart" className="w-[60%]" />
+                <img src={chart1} alt="chart" className="w-[40%]"/>
+              </div> */}
+
+
+              <div className="Animalcharttable px-8">
+                <div className="Animalcharttable-top flex flex-row justify-between mb-4">
+                  <div className="text-primary text-2xl font-semibold">Livestock</div>
+                  <div className=" text-black2 text-md font-medium px-4">
+                    <Link to="/animals" className="flex flex-row cursor-pointer gap-1 items-center">See All<RxCaretRight/></Link>
+                  </div>
                 </div>
                 <AddLivestockModal
                   open={isModalOpen}
@@ -262,24 +267,27 @@ const Dashboard = () => {
                   handleEdit={handleEditLivestock}
                   livestock={selectedLivestock}
                 />
-                <table>
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Specie</th>
-                      <th>Status</th>
-                      <th>Last Treatment</th>
-                      <th>Action</th>
+
+                {/* Table */}
+                <table className="min-w-full border-collapse border border-disable px-8 py-4">
+                  <thead className="bg-fa text-sm text-left">
+                    <tr className="px-4 py-8">
+                      <th className="px-6 py-6 text-black font-normal">ID</th>
+                      <th className="px-4 py-6 text-black font-normal">Specie</th>
+                      <th className="px-4 py-6 text-black font-normal">Status</th>
+                      <th className="px-4 py-6 text-black font-normal">Last Treatment</th>
+                      <th className="px-4 py-6 text-black font-normal">Action</th>
                     </tr>
                   </thead>
+
                   <tbody>
                     {dashboardData?.animals?.slice(0, 3).map((animal, index) => (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{animal?.specie}</td>
-                        <td>{animal?.status}</td>
-                        <td>{animal?.last_treatment}</td>
-                        <td>
+                      <tr key={index} className="text-black2 text-sm text-left items-center border-b border-disable px-4 py-8">
+                        <td className="px-6 py-6">{index + 1}</td>
+                        <td className="px-4 py-6">{animal?.specie}</td>
+                        <td className="px-4 py-6">{animal?.status}</td>
+                        <td className="px-4 py-6">{animal?.last_treatment}</td>
+                        <td className="px-6">
                           <ActionButton
                             onView={() => handleOpenViewModal(animal)}
                             onEdit={() => handleOpenEditModal(animal)}
@@ -293,9 +301,9 @@ const Dashboard = () => {
               </div>
             </div>
           )}
-          {view === "animals" && <Animals />}
+          {/* {view === "animals" && <Animals />}
           {view === "appointments" && <Appointments />}
-          {view === "settings" && <Settings />}
+          {view === "settings" && <Settings />} */}
         </div>
       </div>
     </div>

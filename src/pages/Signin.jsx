@@ -114,7 +114,7 @@ const Signin = () => {
                 {/* </Link> */}
                 <div className="signinbottom">
                   Don't have an account?{" "}
-                  <Link to="/SignUp">
+                  <Link to="/signUp">
                     <button className=" text-primary font-medium text-md">Sign-Up</button>
                   </Link> 
                 </div>
