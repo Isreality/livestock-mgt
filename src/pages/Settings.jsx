@@ -104,14 +104,10 @@ const Settings = () => {
             <div className="innerrightdashboardtop">
               <div className="mb-4 items-center"><Header title="Settings" link="/settings"/></div>
 
-              {/* <div className="px-8">
-                <div className="mb-4"><Heading title="Settings"/></div>
-              </div>  */}
-
               <div className="flex md:flex-row flex-col justify-between items-left md:items-center px-8 mb-4">
                 <div className="mb-4 text-left"><Heading title="Settings"/></div>
                   <div>
-                    <Link to="/dashboard/settings/updateprofile" className="flex flex-row items-center bg-primary py-4 px-6 text-white text-md text-center rounded-md gap-2">
+                    <Link to="/settings/updateprofile" className="flex flex-row items-center bg-primary py-4 px-6 text-white text-md text-center rounded-md gap-2">
                       {/* <button
                         onClick={() => handleViewChange("updateprofile")}
                         className="flex flex-row items-center bg-primary py-4 px-6 text-white text-md text-center rounded-md gap-2"

@@ -27,7 +27,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/animals" element={<Animals />} />
             <Route path="/settings" element={<Settings />} />
-            <Route path="/dashboard/settings/updateprofile" element={<UpdataProfile />} />
+            <Route path="/settings/updateprofile" element={<UpdataProfile />} />
             <Route path="/appointment" element={<Appointments />} />
           </Routes>
         </ToastProvider>
