@@ -167,46 +167,7 @@ const Dashboard = () => {
     <div className="Dashboard">
       <div className="main flex flex-row">
         <Sidebar/>
-        {/* <button className="mobilemenubutton" onClick={toggleNav}><img src={menuicon} alt="img" /></button>
-        <div className={`leftdashboard ${showNav ? "open" : ""}`}>
-          <div className="buttonsintheleft">
-            <p>Livestock</p>
-            <div className="leftdashboardbuttons">
-              <label className={view === "dashboard" ? "active" : ""}>
-                <img src={dashboardicon} alt="img" />
-                <button onClick={() => handleViewChange("dashboard")}>
-                  Dashboard
-                </button>
-              </label>
-              <label className={view === "animals" ? "active" : ""}>
-                <img src={animalicon} alt="img" />
-                <button onClick={() => handleViewChange("animals")}>
-                  Animals
-                </button>
-              </label>
-              <label className={view === "appointments" ? "active" : ""}>
-                <img src={appointmenticon} alt="img" />
-                <button onClick={() => handleViewChange("appointments")}>
-                  Appointments
-                </button>
-              </label>
-              <label className={view === "settings" ? "active" : ""}>
-                <img src={settingicon} alt="img" />
-                <button onClick={() => handleViewChange("settings")}>
-                  Settings
-                </button>
-              </label>
-            </div>
-          </div>
-          <div className="leftdashboardbuttonsbottom">
-            <label className="logoutbutton">
-              <img src={logouticon} alt="" />
-              <Link to="/">
-                <button>LOGOUT</button>
-              </Link>
-            </label>
-          </div>
-        </div> */}
+        
         <div className="rightdashboard w-full">
           {view === "dashboard" && (
             <div className="innerrightdashboard">

@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./Animals.css";
+// import "./Animals.css";
 import not from "../images/not.png";
 import profile from "../images/user.png";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import Sidebar from "../components/sideBar/SideBar";
+import Header from "../components/head/Header";
+import Heading from "../components/head/Heading";
 import AddLivestockModal from "../components/addlivestockmodal/AddLivestockModal";
 import ViewLivestockModal from "../components/viewLivestockModal/ViewLivestockModal";
 import EditLivestockModal from "../components/editLivestock/EditLivestockModal";
@@ -146,94 +150,115 @@ const Animals = () => {
 
   return (
     <div className="Animals">
-      <div className="innerrightAnimalstop">
-        <div className="Animalstopleft">
-          <h2 className="Animalspage">
-            Home {">"} <span className="blueAnimals"> Animals</span>
-          </h2>
-          <div className="animalhealthtop">
-            <h1 className="Animalspagetop">Animals</h1>
-            <div className="animalhealth">
-              <select id="Health-Status" onChange={handleFilterAnimalData}>
-                <option value="all">Health Status</option>
-                <option value="all">All</option>
-                <option value="healthy">Healthy</option>
-                <option value="sick">Sick</option>
-              </select>
-              <div className="Animalsearchbar">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchTerm}
-                  onChange={handleChange}
-                  onKeyDown={handleKeyPress}
-                />
+      <div className="innerrightAnimalstop flex flex-row">
+        <Sidebar/>
+        <div className="w-full"> 
+          <div className="Animalstopleft">
+            <div className="mb-4 items-center"><Header title="Animals" link="/animals"/></div>
+
+            <div className="animalhealthtop flex flex-row justify-between items-center px-8">
+              <div className="">
+                <div className="mb-4"><Heading title="Animals"/></div>
+              </div> 
+              <div className="animalhealth flex flex-row gap-2">
+                <div className="Animalsearchbar">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    value={searchTerm}
+                    onChange={handleChange}
+                    onKeyDown={handleKeyPress}
+                    className="p-4 text-sm text-black2 border border-f2 rounded focus:bg-white focus:outline-primary"
+                  />
+                </div>
+
+                <div className='relative'>
+                  <select id="Health-Status" onChange={handleFilterAnimalData} className="block appearance-none py-4 px-8 text-sm text-black2 bg-fa rounded focus:outline-primary cursor-pointer">
+                    <option value="all">Health Status</option>
+                    <option value="all">All</option>
+                    <option value="healthy">Healthy</option>
+                    <option value="sick">Sick</option>
+                  </select>
+
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-black2">
+                    <RiArrowDropDownLine className="h-6 w-6"/>
+                  </div>
+                </div>
+
+                <div className="add-btn-wrapper">
+                  <button
+                    onClick={handleOpenModal}
+                    type="button"
+                    className="flex flex-row w-full gap-1 items-center px-6 py-4 bg-primary text-white text-sm text-center rounded-md"
+                  >
+                  Add+
+                  </button>
+                </div>
               </div>
+
+              <AddLivestockModal
+                open={isModalOpen}
+                handleClose={handleCloseModal}
+                handleAdd={handleAddLivestock}
+              />
+
+              <ViewLivestockModal
+                open={isViewModalOpen}
+                handleClose={handleCloseViewModal}
+                livestock={selectedLivestock}
+              />
+              <EditLivestockModal
+                open={isEditModalOpen}
+                handleClose={handleCloseEditModal}
+                handleEdit={handleEditLivestock}
+                livestock={selectedLivestock}
+              />
+            </div><br/>
+
+            <div className="mx-8">
+              <table className="min-w-full border-collapse border border-disable px-8 py-4">
+                <thead className="bg-fa text-sm text-left">
+                  <tr className="px-4 py-8">
+                    <th className="px-6 py-6 text-black font-normal">ID</th>
+                    <th className="px-4 py-6 text-black font-normal">Specie</th>
+                    <th className="px-4 py-6 text-black font-normal">Status</th>
+                    <th className="px-4 py-6 text-black font-normal">Body Temperature</th>
+                    <th className="px-4 py-6 text-black font-normal">Last Treatment</th>
+                    <th className="px-4 py-6 text-black font-normal">Action</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  {animalData?.map((animal, index) => (
+                    <tr key={index} className="text-black2 text-sm text-left items-center border-b border-disable px-4 py-8">
+                      <td className="px-6 py-6">{index + 1}</td>
+                      <td className="px-4 py-6">{animal?.specie}</td>
+                      <td className="px-4 py-6">{animal?.status}</td>
+                      <td className="px-4 py-6">{animal?.temperature}°C</td>
+                      <td className="px-4 py-6">{animal?.last_treatment}</td>
+                      <td className="px-6">
+                        <ActionButton
+                          onView={() => handleOpenViewModal({ animal })}
+                          onEdit={() => handleOpenEditModal({ animal })}
+                          onDelete={() => handleDelete(animal?.animalid)}
+                        />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table> 
             </div>
-
-            <AddLivestockModal
-              open={isModalOpen}
-              handleClose={handleCloseModal}
-              handleAdd={handleAddLivestock}
-            />
-            <ViewLivestockModal
-              open={isViewModalOpen}
-              handleClose={handleCloseViewModal}
-              livestock={selectedLivestock}
-            />
-            <EditLivestockModal
-              open={isEditModalOpen}
-              handleClose={handleCloseEditModal}
-              handleEdit={handleEditLivestock}
-              livestock={selectedLivestock}
-            />
+             
 
           </div>
+
+          
+
         </div>
-        <div className="Animalstopright">
-          <div className="add-btn-wrapper">
-            <button
-              onClick={handleOpenModal}
-              type="button"
-              className="add-btn"
-            >
-              add+
-            </button>
-          </div>
-          {/* <img src={not} alt="notifications" /> */}
-          <img src={profile} alt="profile"/> 
-        </div>
-      </div>
-      <table className="animalstable">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Specie</th>
-            <th>Status</th>
-            <th>Body Temperature</th>
-            <th>Last Treatment</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {animalData?.map((animal, index) => (
-            <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{animal?.specie}</td>
-              <td>{animal?.status}</td>
-              <td>{animal?.temperature}°C</td>
-              <td>{animal?.last_treatment}</td>
-              <td>
-                <ActionButton
-                  onView={() => handleOpenViewModal({ animal })}
-                  onEdit={() => handleOpenEditModal({ animal })}
-                  onDelete={() => handleDelete(animal?.animalid)}
-                />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+        
+        
+      
+      
       {/* <label className="numbering">
         <h1>{"<"}</h1>
         <h2>1</h2>
@@ -245,6 +270,7 @@ const Animals = () => {
         <h2>100</h2>
         <h1>{">"}</h1>
       </label> */}
+      </div>
     </div>
   );
 };
