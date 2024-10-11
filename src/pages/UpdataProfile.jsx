@@ -154,7 +154,7 @@ const UpdataProfile = () => {
   return (
     <div>
       <div className="personal-info-header-wrapper flex flex-row">
-        <div className="bg-primary"><Sidebar/></div>
+        <div className="bg-none md:bg-none lg:bg-primary"><Sidebar/></div>
 
         <div className="updateprofiletopleft w-full">
           {/* Header & Heading */}
@@ -215,7 +215,7 @@ const UpdataProfile = () => {
 
                       {/* Submit Button */}
                       <div className="grid justify-items-end">
-                        <button type="submit"  className='mt-4 w-full md:w-64 py-4 px-20 rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-md font-medium'>
+                        <button type="submit"  className='mt-4 w-full md:w-full lg:w-64 py-4 px-20 rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-md font-medium'>
                           {/* {spin ? <div className="px-2 text-md"><FaSpinner className="animate-spin" /> </div> : 'Update'} */}
                           {loading ? (
                             <ThreeDots
@@ -282,6 +282,7 @@ const UpdataProfile = () => {
                         className="edit-input border p-6 w-full md:w-full rounded-md border-fa bg-white focus:bg-white focus:outline-fa"
                         value={newPassword}
                         onChange={handleNewPasswordChange}
+                        placeholder='Enter new password'
                       />
                       <span
                         onClick={toggleShowPassword}
@@ -310,6 +311,7 @@ const UpdataProfile = () => {
                         id="confirm-password"
                         value={confirmPassword}
                         onChange={handleConfirmPasswordChange}
+                        placeholder='Confirm password'
                       />
                       <span
                         onClick={toggleShowPassword}
@@ -331,7 +333,7 @@ const UpdataProfile = () => {
 
                     <div className="grid justify-items-end">    
                       {/* <button type="submit" className='mt-4 w-full md:w-64 py-4 px-20  rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-md font-medium'> */}
-                      <button type="submit" className="update-button mt-4 w-full md:w-64 py-4 px-20  rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-md font-medium">
+                      <button type="submit" className="update-button mt-4 w-full md:w-full lg:w-64 py-4 px-20  rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-md font-medium">
                         {loading ? (
                           <ThreeDots
                             type="ThreeDots"
