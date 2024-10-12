@@ -62,34 +62,21 @@ window.addEventListener('scroll', toggleVisible);
 
   return (
     <div className='landing-page'>
-      {/* Navbar */}
-      <div className=' w-full flex flex-wrap justify-between px-24 py-4 md:py-6 m-0 z-50 items-center border-primary border-b-2'>
+      {/* Mobile menu */}
+      <div className='lg:hidden w-full flex flex-row justify-between px-4 md:px-24 py-4 md:py-6 m-0 z-50 items-center border-primary border-b'>
         <div className="flex justify-items-start items-center">
-          <img className="w-[100px] md:w-[130px] object-cover" src={logo} alt="logo"/>
+          <img className="w-[100px] md:w-[100px] object-cover" src={logo} alt="logo"/>
         </div>
-        {/* Mobile menu */}
-        <div className="md:hidden">
-        <button className="" onClick={()=>toggleNav1(true)}>{showNav1 ? <MdClose className="left-40"/> : <RxHamburgerMenu className="text-primary font-bold absolute top-6 size-5 mr-4 right-4"/>}</button>
+
+        <Link to="/signup">
+          <button className='bg-primary text-sm text-white border-primary font-medium px-4 md:px-8 py-2 md:py-4 rounded-md'>Sign Up</button>
+        </Link>
+        
+        {/* <button className="" onClick={()=>toggleNav1(true)}>{showNav1 ? <MdClose className="absolute top-5 z-50 mr-4 right-4"/> : <RxHamburgerMenu className="text-primary font-bold "/>}</button>
           {showNav1 &&(
                 <div>
                     <div className="fixed h-full w-screen right-0 -translate-x-0 transition-all">
                         <div className="flex bg-white flex-col absolute right-0 top-0 h-screen p-8 gap-2 z-[100] w-40">
-                          {/* <div className='text-md p-2'>
-                            Home
-                          </div>
-
-                          <HashLink smooth to="#thirdpage" className='text-md p-2'>
-                            About-Us
-                          </HashLink>
-
-                          <HashLink smooth to="#thirdpage" className='text-md p-2'>
-                            Services
-                          </HashLink>
-
-                          <HashLink smooth to="#thirdpage" className='text-md p-2'>
-                            Contact
-                          </HashLink> */}
-
                           <Link to="/signup">
                             <button className='bg-primary text-sm text-white border-primary font-medium px-4 py-2 rounded-md'>Sign Up</button>
                           </Link>
@@ -100,45 +87,53 @@ window.addEventListener('scroll', toggleVisible);
                         </div> 
                     </div>
                 </div>
-          )} 
-        </div>
+          )}  */}
+        
+      </div> 
 
         {/* Desktop menu */}
-        <div className='nav-right hidden md:flex lg:flex'>
-          <ul className="flex flex-row gap-5">
-            <li className="navhover text-md">Home</li>
-            <li className="navhover">
-              <HashLink smooth to="#thirdpage" className='text-md p-2'>
-                About-Us
-              </HashLink>
-            </li>
-            <li className="navhover">
-              <HashLink smooth to="#fourthpage" className='text-md p-2'>
-                Services
-              </HashLink>
-            </li>
-            <li className="navhover">
-              <HashLink smooth to="#sixthpage" className='text-md p-2'>
-                Contact
-              </HashLink>
-            </li>
-            <li className=''>
-              <Link to="/signup" className='bg-primary text-sm text-white border-primary font-medium px-6 py-4 rounded-md'>
-                Sign Up
-              </Link>
-            </li>
-            <li className=''>
-              <Link to="/signin" className='bg-white hover:bg-primary border-primary font-medium text-primary hover:text-white px-6 py-4 border-2 text-sm rounded-md'>
-                Sign In
-              </Link>
-            </li>
-          </ul>
+        <div className='hidden w-full lg:flex flex-wrap justify-between px-24 py-4 md:py-6 m-0 z-50 items-center border-primary border-b'>
+          <div className="flex justify-items-start items-center">
+            <img className="w-[100px] md:w-[130px] object-cover" src={logo} alt="logo"/>
+          </div>
+
+          <div className='nav-right hidden md:hidden lg:flex'>
+            <ul className="flex flex-row gap-5">
+              <li className="navhover text-md">Home</li>
+              <li className="navhover">
+                <HashLink smooth to="#thirdpage" className='text-md p-2'>
+                  About-Us
+                </HashLink>
+              </li>
+              <li className="navhover">
+                <HashLink smooth to="#fourthpage" className='text-md p-2'>
+                  Services
+                </HashLink>
+              </li>
+              <li className="navhover">
+                <HashLink smooth to="#sixthpage" className='text-md p-2'>
+                  Contact
+                </HashLink>
+              </li>
+              <li className=''>
+                <Link to="/signup" className='bg-primary text-sm text-white border-primary font-medium px-8 py-4 rounded-md'>
+                  Sign Up
+                </Link>
+              </li>
+              {/* <li className=''>
+                <Link to="/signin" className='bg-white hover:bg-primary border-primary font-medium text-primary hover:text-white px-6 py-4 border-2 text-sm rounded-md'>
+                  Sign In
+                </Link>
+              </li> */}
+            </ul>
+          </div>
         </div>
-      </div>
+        
+      
 
       <div className='firstpage px-4 md:px-6'>
         
-        <div className='firstpage-left'>
+        <div className='firstpage-left gap-2'>
           <div className="flex flex-row gap-1 justify-center md:justify-start items-center">
             <Fade direction="down" triggerOnce="true">
               <img src={landingdog} alt="dog"/>
@@ -147,8 +142,8 @@ window.addEventListener('scroll', toggleVisible);
           </div>
           <div>
             <Fade direction="left" triggerOnce="true">
-              <h1 className="text-4xl text-center md:text-left">Monitor your Animals with our <span className="text-primary">Intuitive Web Application</span></h1>
-              <h4 className="text-md md:text-md text-center md:text-left">We provide detailed health reports to help you make informed decisions about 
+              <h1 className="text-3xl md:text-4xl text-center md:text-left">Monitor your Animals with our <span className="text-primary">Intuitive Web Application</span></h1>
+              <h4 className="text-sm md:text-lg lg:text-xl text-center md:text-left">We provide detailed health reports to help you make informed decisions about 
                   your livestock, identify trends and prevent future health issues.
               </h4>
               </Fade>
@@ -156,7 +151,7 @@ window.addEventListener('scroll', toggleVisible);
           <div>
             <Link to="/signup">
               <Fade direction="up" triggerOnce="true">
-              <button className="bg-primary">Get Started</button>
+              <button className="bg-primary text-sm md:text-lg px-8 py-4 text-white rounded-md cursor-pointer">Get Started</button>
               </Fade>
             </Link>
           </div>
@@ -225,7 +220,7 @@ window.addEventListener('scroll', toggleVisible);
 
           <div className='thirdpage-words'>
             <Fade direction="up" triggerOnce="true">
-              <h4 className="text-md md:text-xl text-black text-justify font-normal">
+              <h4 className="text-sm md:text-xl text-black text-justify font-normal">
                 We understand the critical importance of maintaining the health and well-being of your livestock. 
                 Our innovative health monitoring system uses real-time temperature tracking to ensure your animals 
                 are always at their best.
@@ -294,12 +289,12 @@ window.addEventListener('scroll', toggleVisible);
       {/* How it Works */}
       <div className='fifthpage px-4 py-6 md:px-24 md:py-24 mt-24 mb-8'>
         <h1 className="text-4xl font-medium text-center mb-8">How it <span className=" text-primary font-bold">Works</span></h1>
-        <div className='fifthpage-grid grid grid-cols-1 md:grid-cols-2 gap-10'>
+        <div className='fifthpage-grid grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10'>
           <div className='grid1 gap-3'>
             <Fade triggerOnce="true">
               <img src={grid1} alt="chart" className="mb-2"/>
               <h2 className="text-2xl text-left font-bold text-primary mb-1">Attach Sensor</h2>
-              <h1 className="text-md text-left">Easily attach our temperature sensor to your animal.</h1>
+              <h1 className="text-sm md:text-md text-left">Easily attach our temperature sensor to your animal.</h1>
             </Fade>
           </div>
 
@@ -307,7 +302,7 @@ window.addEventListener('scroll', toggleVisible);
             <Fade triggerOnce="true">
               <img src={grid2} alt="chart" className="mb-2"/>
               <h2 className="text-2xl text-left font-bold text-primary mb-1">Monitor Health</h2>
-              <h1 className="text-md text-left">Track your animal’s temperature in real-time through our platform.</h1>
+              <h1 className="text-sm md:text-md text-left">Track your animal’s temperature in real-time through our platform.</h1>
             </Fade>
           </div>
 
@@ -315,7 +310,7 @@ window.addEventListener('scroll', toggleVisible);
             <Fade triggerOnce="true">
               <img src={grid3} alt="chart" className="mb-2"/>
               <h2 className="text-2xl text-left font-bold text-primary mb-1">Get Alerts</h2>
-              <h1 className="text-md text-left">Receive instant alerts if any temperature anomalies are detected.</h1>
+              <h1 className="text-sm md:text-md text-left">Receive instant alerts if any temperature anomalies are detected.</h1>
             </Fade>
           </div>
 
@@ -323,7 +318,7 @@ window.addEventListener('scroll', toggleVisible);
             <Fade triggerOnce="true">
               <img src={grid4} alt="chart" className="mb-2"/>
               <h2 className="text-2xl text-left font-bold text-primary mb-1">Schedule Visits</h2>
-              <h1 className="text-md text-left">Book appointments with your vet directly through our system.</h1>
+              <h1 className="text-sm md:text-md text-left">Book appointments with your vet directly through our system.</h1>
             </Fade>
           </div>
         </div>

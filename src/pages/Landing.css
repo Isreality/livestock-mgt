@@ -111,7 +111,7 @@
     font-weight: lighter;
 }
 
-.firstpage-left button {
+/* .firstpage-left button {
     margin-top: 1%;
     height: 64px;
     width: 193px;
@@ -121,7 +121,7 @@
     border: transparent;
     border-radius: 0.4rem;
     cursor: pointer;
-}
+} */
 
 .firstpage-right {
     width: 35%;
