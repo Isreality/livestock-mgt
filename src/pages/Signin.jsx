@@ -106,7 +106,7 @@ const Signin = () => {
                 
                 {/* Button */}
                 <button type="submit"
-                  className="signupbutton flex w-80 md:w-full py-4 px-20 md:px-64 rounded-md border-fa bg-primary cursor-pointer text-white text-md justify-center font-bold"
+                  className="signupbutton flex w-80 md:w-96 lg:w-full py-4 px-20 md:px-64 lg:px-64 rounded-md border-fa bg-primary cursor-pointer text-white text-md justify-center font-bold"
                   disabled={loading}>
                     Sign In
                 </button>
@@ -122,7 +122,7 @@ const Signin = () => {
             </div>
           </div>
 
-          <div className="rightsignin hidden md:flex lg:flex">
+          <div className="rightsignin hidden md:hidden lg:flex">
             <img src={Cat} alt="dog image" className="w-full h-screen right-0"/>
           </div>
         </div>

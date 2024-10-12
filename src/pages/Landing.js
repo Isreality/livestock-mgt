@@ -63,13 +63,13 @@ window.addEventListener('scroll', toggleVisible);
   return (
     <div className='landing-page'>
       {/* Mobile menu */}
-      <div className='lg:hidden w-full flex flex-row justify-between px-4 md:px-24 py-4 md:py-6 m-0 z-50 items-center border-primary border-b'>
+      <div className='lg:hidden w-full flex flex-row justify-between px-4 md:px-24 py-4 md:py-6 m-0 z-50 items-center'>
         <div className="flex justify-items-start items-center">
           <img className="w-[100px] md:w-[100px] object-cover" src={logo} alt="logo"/>
         </div>
 
-        <Link to="/signup">
-          <button className='bg-primary text-sm text-white border-primary font-medium px-4 md:px-8 py-2 md:py-4 rounded-md'>Sign Up</button>
+        <Link to="/signin">
+          <button className='bg-primary text-sm text-white border-primary font-medium px-4 md:px-8 py-2 md:py-4 rounded-md'>Sign In</button>
         </Link>
         
         {/* <button className="" onClick={()=>toggleNav1(true)}>{showNav1 ? <MdClose className="absolute top-5 z-50 mr-4 right-4"/> : <RxHamburgerMenu className="text-primary font-bold "/>}</button>
@@ -92,7 +92,7 @@ window.addEventListener('scroll', toggleVisible);
       </div> 
 
         {/* Desktop menu */}
-        <div className='hidden w-full lg:flex flex-wrap justify-between px-24 py-4 md:py-6 m-0 z-50 items-center border-primary border-b'>
+        <div className='hidden w-full lg:flex flex-wrap justify-between px-24 py-4 md:py-6 m-0 z-50 items-center'>
           <div className="flex justify-items-start items-center">
             <img className="w-[100px] md:w-[130px] object-cover" src={logo} alt="logo"/>
           </div>
@@ -116,8 +116,8 @@ window.addEventListener('scroll', toggleVisible);
                 </HashLink>
               </li>
               <li className=''>
-                <Link to="/signup" className='bg-primary text-sm text-white border-primary font-medium px-8 py-4 rounded-md'>
-                  Sign Up
+                <Link to="/signin" className='bg-primary text-sm text-white border-primary font-medium px-8 py-4 rounded-md'>
+                  Sign In
                 </Link>
               </li>
               {/* <li className=''>
@@ -130,39 +130,41 @@ window.addEventListener('scroll', toggleVisible);
         </div>
         
       
+      {/* Hero Section */}
+      <div className='firstpage px-4 md:px-10 lg:px-16 mb-4'>
+        <div className="flex flex-col md:flex-row lg:flex-row gap-2 justify-between items-center">
+          <div className='firstpage-left '>
+            <div className="flex flex-row gap-1 justify-center md:justify-start mb-2">
+              <Fade direction="down" triggerOnce="true">
+                <img src={landingdog} alt="dog"/>
+                <img src={LandingPig} alt="chart"/>
+              </Fade>
+            </div>
+            <div>
+              <Fade direction="left" triggerOnce="true">
+                <h1 className="text-3xl md:text-4xl text-center md:text-left lg:text-left mb-2">Monitor your Animals with our <span className="text-primary font-bold">Intuitive Web Application</span></h1>
+                <h4 className="text-sm md:text-lg lg:text-xl text-center md:text-left lg:text-left mb-2">We provide detailed health reports to help you make informed decisions about 
+                    your livestock, identify trends and prevent future health issues.
+                </h4>
+                </Fade>
+            </div>
+            <div className="flex justify-center md:justify-start">
+              <Link to="/signin">
+                <Fade direction="up" triggerOnce="true">
+                <button className="bg-primary text-sm md:text-lg px-8 py-4 text-white rounded-md cursor-pointer">Get Started</button>
+                </Fade>
+              </Link>
+            </div>
+          </div>
 
-      <div className='firstpage px-4 md:px-6'>
-        
-        <div className='firstpage-left gap-2'>
-          <div className="flex flex-row gap-1 justify-center md:justify-start items-center">
-            <Fade direction="down" triggerOnce="true">
-              <img src={landingdog} alt="dog"/>
-              <img src={LandingPig} alt="chart"/>
+          {/* Cat image */}
+          <div className='firstpage-right hidden md:flex lg:flex w-[35%] mb-24 '>
+            <Fade direction="right" triggerOnce="true">
+              <img src={Cat} alt="chart" className="flex h-full md:h-[500px] w-full md:w-full object-cover rounded-lg md:rounded-lg lg:rounded-3xl" />
             </Fade>
-          </div>
-          <div>
-            <Fade direction="left" triggerOnce="true">
-              <h1 className="text-3xl md:text-4xl text-center md:text-left">Monitor your Animals with our <span className="text-primary">Intuitive Web Application</span></h1>
-              <h4 className="text-sm md:text-lg lg:text-xl text-center md:text-left">We provide detailed health reports to help you make informed decisions about 
-                  your livestock, identify trends and prevent future health issues.
-              </h4>
-              </Fade>
-          </div>
-          <div>
-            <Link to="/signup">
-              <Fade direction="up" triggerOnce="true">
-              <button className="bg-primary text-sm md:text-lg px-8 py-4 text-white rounded-md cursor-pointer">Get Started</button>
-              </Fade>
-            </Link>
-          </div>
+          </div>     
         </div>
-
-        {/* Cat image */}
-        <div className='firstpage-right mb-24'>
-          <Fade direction="right" triggerOnce="true">
-            <img src={Cat} alt="chart" className="flex h-[300px] md:h-[500px] w-[500px] md:w-full object-cover rounded-lg md:rounded-3xl" />
-          </Fade>
-        </div>
+        
       </div>
 
       {/* Back to top button */}
@@ -202,10 +204,10 @@ window.addEventListener('scroll', toggleVisible);
       </div>
 
       {/* WHy Choose our system */}
-      <div id='thirdpage' className='thirdpage px-4 md:px-24 py:24 mt-16 mb-8'>
+      <div id='thirdpage' className='thirdpage px-4 md:px-16 lg:px-24 py:24 mt-16 mb-8'>
         <div>
           <Fade direction="down" triggerOnce="true">
-          <h1 className="text-3xl md:text-4xl font-medium mb-4">Why Choose our <span className="font-bold">System?</span></h1>
+          <h1 className="text-2xl md:text-4xl font-medium mb-4">Why Choose our <span className="font-bold">System?</span></h1>
           </Fade>
         </div>
         <div className="">
@@ -231,9 +233,9 @@ window.addEventListener('scroll', toggleVisible);
       </div>
 
       {/* Key Features */}
-      <div id='fourthpage' className='fourthpage px-4 md:px-24 mb-8'>
+      <div id='fourthpage' className='fourthpage px-4 md:px-16 lg:px-24 mb-4'>
       
-        <div className='fourthpage-wrapper'>
+        <div className='fourthpage-wrapper flex flex-col md:flex-col lg:flex-row gap-2 items-center'>
           <div className='fourthpage-img'>
             <Fade direction="left" triggerOnce="true">
               <img src={landingdog} alt="chart" />
@@ -243,12 +245,12 @@ window.addEventListener('scroll', toggleVisible);
           <div className='fourthpage-right'>
             <div className='keylists'>
               <Fade direction="right" triggerOnce="true">
-              <h1 className="text-3xl md:text-4xl font-medium">Key <span className="font-bold">Features</span></h1><br/>
+              <h1 className="text-2xl md:text-4xl font-medium">Key <span className="font-bold text-primary">Features</span></h1><br/>
               </Fade>
 
               <div className='keylists1 flex flex-row items-center gap-2'>
                 {/* <Fade direction="left" triggerOnce="true"> */}
-                  <img src={keylist1} alt="chart" />
+                  <img src={keylist1} alt="chart" className="size-12 md:size-15"/>
                 {/* </Fade> */}
                 {/* <Fade direction="right" triggerOnce="true"> */}
                   <p className="text-sm text-black text-left md:text-lg">Real-Time Temperature Monitoring</p>
@@ -257,7 +259,7 @@ window.addEventListener('scroll', toggleVisible);
 
               <div className='keylists1 flex flex-row items-center gap-2'>
                 {/* <Fade direction="left" triggerOnce="true"> */}
-                  <img src={keylist2} alt="chart" />
+                  <img src={keylist2} alt="chart" className="size-12 md:size-15"/>
                 {/* </Fade> */}
                 {/* <Fade direction="right" triggerOnce="true"> */}
                   <p className="text-sm text-black text-left md:text-lg">Continuous health tracking with instant alerts for abnormal temperature readings.</p>
@@ -266,7 +268,7 @@ window.addEventListener('scroll', toggleVisible);
 
               <div className='keylists1 flex flex-row items-center gap-2'>
                 {/* <Fade direction="left" triggerOnce="true"> */}
-                  <img src={keylist3} alt="chart" />
+                  <img src={keylist3} alt="chart" className="size-12 md:size-15"/>
                 {/* </Fade> */}
                 {/* <Fade direction="right" triggerOnce="true"> */}
                   <p className="text-sm text-black text-left md:text-lg">Easy-to-use dashboard for quick insights into your herd's health status.</p>
@@ -275,7 +277,7 @@ window.addEventListener('scroll', toggleVisible);
 
               <div className='keylists1 flex flex-row items-center gap-2'>
                 {/* <Fade direction="left" triggerOnce="true"> */}
-                  <img src={keylist4} alt="chart" />
+                  <img src={keylist4} alt="chart" className="size-12 md:size-15"/>
                 {/* </Fade> */}
                 {/* <Fade direction="right" triggerOnce="true"> */}
                   <p className="text-sm text-black text-left md:text-lg">Vet Appointment Scheduling</p>
@@ -287,47 +289,57 @@ window.addEventListener('scroll', toggleVisible);
       </div><br/><br/>
 
       {/* How it Works */}
-      <div className='fifthpage px-4 py-6 md:px-24 md:py-24 mt-24 mb-8'>
-        <h1 className="text-4xl font-medium text-center mb-8">How it <span className=" text-primary font-bold">Works</span></h1>
+      <div className='fifthpage px-4 py-6 md:px-16 lg:px-24 md:py-24 mt-24 mb-8 bg-fa'>
+        <h1 className="text-2xl md:text-4xl font-medium text-center mb-4 md:mb-8">How it <span className=" text-primary font-bold">Works</span></h1>
         <div className='fifthpage-grid grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10'>
-          <div className='grid1 gap-3'>
+          <div className='grid1 gap-2 w-full bg-white px-2 pt-2 py-4 rounded-md'>
             <Fade triggerOnce="true">
-              <img src={grid1} alt="chart" className="mb-2"/>
-              <h2 className="text-2xl text-left font-bold text-primary mb-1">Attach Sensor</h2>
-              <h1 className="text-sm md:text-md text-left">Easily attach our temperature sensor to your animal.</h1>
+              <img src={grid1} alt="chart" className="mb-2 w-full"/>
+              <div className="px-4">
+                <h2 className="text-lg md:text-2xl text-left font-bold text-primary mb-1">Attach Sensor</h2>
+                <h1 className="text-sm md:text-lg text-left">Easily attach our temperature sensor to your animal.</h1>
+              </div>
             </Fade>
           </div>
 
-          <div className='grid2 gap-2'>
+          <div className='grid2 gap-2 w-full bg-white px-2 pt-2 py-4 rounded-md'>
             <Fade triggerOnce="true">
-              <img src={grid2} alt="chart" className="mb-2"/>
-              <h2 className="text-2xl text-left font-bold text-primary mb-1">Monitor Health</h2>
-              <h1 className="text-sm md:text-md text-left">Track your animal’s temperature in real-time through our platform.</h1>
+              <img src={grid2} alt="chart" className="mb-2 w-full"/>
+              <div className="px-4">
+                <h2 className="text-lg md:text-2xl text-left font-bold text-primary mb-1">Monitor Health</h2>
+                <h1 className="text-sm md:text-lg text-left">Track your animal’s temperature in real-time through our platform.</h1>
+              </div>
+              
             </Fade>
           </div>
 
-          <div className='grid3 gap-2'>
+          <div className='grid3 gap-2 w-full bg-white px-2 pt-2 py-4 rounded-md'>
             <Fade triggerOnce="true">
-              <img src={grid3} alt="chart" className="mb-2"/>
-              <h2 className="text-2xl text-left font-bold text-primary mb-1">Get Alerts</h2>
-              <h1 className="text-sm md:text-md text-left">Receive instant alerts if any temperature anomalies are detected.</h1>
+              <img src={grid3} alt="chart" className="mb-2 w-full"/>
+              <div className="px-4">
+                <h2 className="text-lg md:text-2xl text-left font-bold text-primary mb-1">Get Alerts</h2>
+                <h1 className="text-sm md:text-lg text-left">Receive instant alerts if any temperature anomalies are detected.</h1>
+              </div>
+              
             </Fade>
           </div>
 
-          <div className='grid4 gap-2'>
+          <div className='grid4 gap-2 w-full bg-white px-2 pt-2 py-4 rounded-md'>
             <Fade triggerOnce="true">
-              <img src={grid4} alt="chart" className="mb-2"/>
-              <h2 className="text-2xl text-left font-bold text-primary mb-1">Schedule Visits</h2>
-              <h1 className="text-sm md:text-md text-left">Book appointments with your vet directly through our system.</h1>
+              <img src={grid4} alt="chart" className="mb-2 w-full"/>
+              <div className="px-4">
+                <h2 className="text-lg md:text-2xl text-left font-bold text-primary mb-1">Schedule Visits</h2>
+                <h1 className="text-sm md:text-lg text-left">Book appointments with your vet directly through our system.</h1>
+              </div>
             </Fade>
           </div>
         </div>
       </div>
 
-      <div className='sixthpage-top mb-8 px-4 md:px-24'>
+      <div className='sixthpage-top mb-8 px-4 md:px-16 lg:px-24'>
           <div className='sixthinfo gap-4'>
           <Fade direction="down" triggerOnce="true">
-            <h2>Hear how the system has made a difference for farmers just like you.</h2>
+            <h2 className="text-xl md:text-2xl lg:text-3xl text-white">Hear how the system has made a difference for farmers just like you.</h2>
           </Fade>
             <Link to="/signup">
               <Fade direction="up" triggerOnce="true">
