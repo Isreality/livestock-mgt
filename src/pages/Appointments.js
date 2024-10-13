@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 // import "./Appointments.css";
-import "./fonts.css";
+import "../fonts.css";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import not from "../images/not.png";
 import profile from "../images/user.png";
@@ -85,7 +85,7 @@ const Appointments = () => {
   };
 
   return (
-    <div>
+    <div className="font-custom">
       <div className="flex flex-row">
         <div className="bg-none md:bg-none lg:bg-primary"><Sidebar/></div>
         <div className="w-full">

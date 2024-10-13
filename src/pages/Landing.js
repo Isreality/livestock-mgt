@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Landing.css";
 import "./style.css";
+import "../fonts.css"
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -62,7 +63,7 @@ const handleClick = () =>{
 window.addEventListener('scroll', toggleVisible);
 
   return (
-    <div className='landing-page'>
+    <div className='landing-page font-custom'>
       {/* Mobile menu */}
       <div className='lg:hidden w-full flex flex-row justify-between px-4 md:px-24 py-4 md:py-6 m-0 z-50 mb-0 md:mb-16 items-center border-primary border-b'>
         <div className="flex justify-items-start items-center">
@@ -208,7 +209,7 @@ window.addEventListener('scroll', toggleVisible);
       <div id='thirdpage' className='thirdpage px-4 md:px-16 lg:px-24 py:24 mt-16 mb-8 '>
         <div className="flex flex-col md:flex-col lg:flex-row-reverse gap-2 md:gap-5 lg:gap-10 items-center">
           <div className='thirdpage-img w-full md:w-full lg:w-[50%]'>
-            <Fade triggerOnce="true">
+            <Fade direction="right" triggerOnce="true">
             <img src={anim} className=" w-full md:w-full h-full md:h-[500px] object-cover rounded-xl mb-4" alt="chart" />
             </Fade>
           </div>
@@ -224,7 +225,7 @@ window.addEventListener('scroll', toggleVisible);
               </div>
 
               <div className='thirdpage-words'>
-                <Fade direction="up" triggerOnce="true">
+                <Fade direction="left" triggerOnce="true">
                   <h4 className="text-sm md:text-lg text-black text-justify md:text-justify lg:text-left font-normal">
                     We understand the critical importance of maintaining the health and well-being of your livestock. 
                     Our innovative health monitoring system uses real-time temperature tracking to ensure your animals 

@@ -11,6 +11,9 @@ import Animals from "./pages/Animals";
 import Settings from "./pages/Settings";
 import Appointments from "./pages/Appointments";
 import UpdataProfile from "./pages/UpdataProfile";
+// import "./style.css";
+import "./index.css";
+import "./fonts.css";
 
 function App() {
   return (

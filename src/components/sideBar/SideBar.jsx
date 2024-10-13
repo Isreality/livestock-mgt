@@ -43,7 +43,7 @@ const Sidebar = () => {
                 </div>
             )}
                 <div>
-                    <div className="hidden md:hidden md:flex-col sticky h-screen left-0 w-60 text-left border-r border-disable p-4 bg-primary md:show">
+                    <div className="hidden md:hidden lg:flex lg:flex-col sticky h-screen left-0 w-60 text-left border-r border-disable p-4 bg-primary md:show">
                         <div className="flex flex-col justify-items-start mb-4 pl-2">                
                         <h1 className="mb-4 mt-4 font-extrabold text-white text-2xl">Livestock</h1>
                         </div>

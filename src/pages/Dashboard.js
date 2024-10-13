@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import "./Dashboard.css";
+import "../fonts.css"
 import dashboardicon from "../images/dashboard.png";
 import animalicon from "../images/animal.png";
 import settingicon from "../images/settings.png";
@@ -164,7 +164,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="Dashboard">
+    <div className="Dashboard font-custom">
       <div className="main flex flex-row">
         <Sidebar/>
         

@@ -4,7 +4,7 @@ import axios from "axios";
 import dog from "../images/Dog.png";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import "./Signup.css";
+import "../fonts.css"
 import { ThreeDots } from "react-loader-spinner";
 import OTPModal from "../components/otp-modal/OtpModal";
 import logo from '../images/livestockwatchicon.png';
@@ -92,7 +92,7 @@ const Signup = () => {
 
   return (
     <>
-      <div className="signup-wrapper">
+      <div className="signup-wrapper font-custom">
       {/* <div className="backhome">
         <Link to="/">
           <button className="backhomebutton">Homepage</button>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import "./update-profile.css";
+import "../fonts.css"
 import Sidebar from "../components/sideBar/SideBar";
 import Header from "../components/head/Header";
 import Heading from "../components/head/Heading";
@@ -152,7 +152,7 @@ const UpdataProfile = () => {
   };
 
   return (
-    <div>
+    <div className="font-custom">
       <div className="personal-info-header-wrapper flex flex-row">
         <div className="bg-none md:bg-none lg:bg-primary"><Sidebar/></div>
 

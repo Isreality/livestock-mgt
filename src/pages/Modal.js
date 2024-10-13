@@ -1,5 +1,6 @@
 import React from 'react';
 import './Modal.css';
+import "../fonts.css"
 
 const Modal = ({ show, handleClose, children }) => {
   if (!show) {
@@ -7,7 +8,7 @@ const Modal = ({ show, handleClose, children }) => {
   }
 
   return (
-    <div className="modal-backdrop">
+    <div className="modal-backdrop font-custom">
       <div className="modal-content">
         <button className="close-button" onClick={handleClose}>X</button>
         {children}

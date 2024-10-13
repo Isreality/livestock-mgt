@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import "./Animals.css";
+import "../fonts.css"
 import not from "../images/not.png";
 import profile from "../images/user.png";
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -149,7 +149,7 @@ const Animals = () => {
   }, [healthStatus, baseUrl]);
 
   return (
-    <div className="Animals">
+    <div className="Animals font-custom">
       <div className="innerrightAnimalstop flex flex-row">
         <Sidebar/>
         <div className="w-full"> 

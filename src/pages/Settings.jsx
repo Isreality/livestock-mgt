@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import "./Settings.css";
+import "../fonts.css"
 import not from "../images/not.png";
 import userimg from "../images/user.png"
 import edituser from "../images/edit img.png"
@@ -92,7 +92,7 @@ const Settings = () => {
   };
 
   return (
-    <div>
+    <div className="font-custom">
       <div className="flex flex-row">
         <Sidebar/>
 
@@ -126,7 +126,7 @@ const Settings = () => {
                       {/* Name */}
                       <div className="flex flex-row justify-between bg-fa p-4 lg:p-8 rounded-md cursor-pointer">
                           <div className="flex flex-row md:flex-row items-center text-sm md:text-md gap-2 text-black2">
-                            <img className="name-icon" src="name.svg" alt="" />
+                            <img className="name-icon size-6 md:size-15" src="name.svg" alt="" />
                             <p className="text-black2 font-normal">Name</p>
                           </div>
 
@@ -138,7 +138,7 @@ const Settings = () => {
                       {/* Email */}
                       <div className="flex flex-row justify-between bg-fa p-4 lg:p-8 rounded-md cursor-pointer">
                           <div className="flex flex-row items-center text-sm md:text-md gap-2 text-black2">
-                              <img className="name-icon" src="email.svg" alt="" />
+                              <img className="name-icon size-6 md:size-15" src="email.svg" alt="" />
                               <p className="text-black2 font-normal">Email</p>
                           </div>
 

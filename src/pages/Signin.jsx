@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import "./Signin.css";
+import "../fonts.css"
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Cat from "../images/Cat.png";
@@ -65,7 +65,7 @@ const Signin = () => {
 
   return (
     <>
-      <div className="signin-wrapper">
+      <div className="signin-wrapper font-custom">
       {/* <div className="backhome">
         <Link to="/">
           <button className="backhomebutton">Homepage</button>

@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        custom: ['Satoshi', 'sans-serif'],
+      },
       colors: {
         primary: 'rgba(33, 150, 243, 1)',
         light: '#F6F3F9',
