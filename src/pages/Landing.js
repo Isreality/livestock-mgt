@@ -15,6 +15,7 @@ import landingdog from "../images/big dog.png";
 import userimg from "../images/user.png"
 import paws from "../images/Paws.png"
 import rabbit from "../images/rabbit.png"
+import anim from "../images/anim.jpg"
 import keylist1 from "../images/keylist1.png"
 import keylist2 from "../images/keylist2.png"
 import keylist3 from "../images/keylist3.png"
@@ -63,7 +64,7 @@ window.addEventListener('scroll', toggleVisible);
   return (
     <div className='landing-page'>
       {/* Mobile menu */}
-      <div className='lg:hidden w-full flex flex-row justify-between px-4 md:px-24 py-4 md:py-6 m-0 z-50 items-center'>
+      <div className='lg:hidden w-full flex flex-row justify-between px-4 md:px-24 py-4 md:py-6 m-0 z-50 mb-0 md:mb-16 items-center border-primary border-b'>
         <div className="flex justify-items-start items-center">
           <img className="w-[100px] md:w-[100px] object-cover" src={logo} alt="logo"/>
         </div>
@@ -92,7 +93,7 @@ window.addEventListener('scroll', toggleVisible);
       </div> 
 
         {/* Desktop menu */}
-        <div className='hidden w-full lg:flex flex-wrap justify-between px-24 py-4 md:py-6 m-0 z-50 items-center'>
+        <div className='hidden w-full lg:flex flex-wrap justify-between px-24 py-4 md:py-6 m-0 z-50 items-center border-primary border-b mb-6'>
           <div className="flex justify-items-start items-center">
             <img className="w-[100px] md:w-[130px] object-cover" src={logo} alt="logo"/>
           </div>
@@ -158,9 +159,9 @@ window.addEventListener('scroll', toggleVisible);
           </div>
 
           {/* Cat image */}
-          <div className='firstpage-right hidden md:flex lg:flex w-[35%] mb-24 '>
+          <div className='firstpage-right flex md:flex lg:flex w-[60%] md:w-[35%] lg:w-[35%] mb-24 '>
             <Fade direction="right" triggerOnce="true">
-              <img src={Cat} alt="chart" className="flex h-full md:h-[500px] w-full md:w-full object-cover rounded-lg md:rounded-lg lg:rounded-3xl" />
+              <img src={Cat} alt="chart" className="flex h-full md:h-[500px] w-full md:w-full object-cover rounded-lg md:rounded-lg lg:rounded-xl" />
             </Fade>
           </div>     
         </div>
@@ -177,8 +178,8 @@ window.addEventListener('scroll', toggleVisible);
             <img src={userimg} alt="chart" />
           </div>
           <div className="text-left gap-1">
-            <h2 className="text-4xl text-white font-bold"><CountUp start={0} end={100} duration={8}/>+</h2>
-            <h4 className="text-2xl  text-white">Users</h4>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl text-white font-bold"><CountUp start={0} end={100} duration={8}/>+</h2>
+            <h4 className="text-lg md:text-xl lg:text-2xl text-left text-white">Users</h4>
           </div>
         </div>
 
@@ -187,8 +188,8 @@ window.addEventListener('scroll', toggleVisible);
             <img src={paws} alt="chart" />
           </div>
           <div className='secondpage21 text-left gap-1'>
-            <h2 className="text-4xl text-left text-white font-bold"><CountUp start={0} end={200} duration={8}/>+</h2>
-            <h4 className="text-2xl text-left  text-white">Specie Distribution</h4>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl text-left text-white font-bold"><CountUp start={0} end={200} duration={8}/>+</h2>
+            <h4 className="text-lg md:text-xl lg:text-2xl text-left  text-white">Specie Distribution</h4>
           </div>
         </div>
 
@@ -197,38 +198,44 @@ window.addEventListener('scroll', toggleVisible);
             <img src={paws} alt="chart" />
           </div>
           <div className='secondpage31 text-left gap-1'>
-            <h2 className="text-4xl text-left text-white font-bold"><CountUp start={0} end={200} duration={8}/>+</h2>
-            <h4 className="text-2xl text-left  text-white">Specie Distribution</h4>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl text-left text-white font-bold"><CountUp start={0} end={200} duration={8}/>+</h2>
+            <h4 className="text-lg md:text-xl lg:text-2xl text-left  text-white">Specie Distribution</h4>
           </div>
         </div>
       </div>
 
       {/* WHy Choose our system */}
-      <div id='thirdpage' className='thirdpage px-4 md:px-16 lg:px-24 py:24 mt-16 mb-8'>
-        <div>
-          <Fade direction="down" triggerOnce="true">
-          <h1 className="text-2xl md:text-4xl font-medium mb-4">Why Choose our <span className="font-bold">System?</span></h1>
-          </Fade>
-        </div>
-        <div className="">
-          <div className='thirdpage-img'>
+      <div id='thirdpage' className='thirdpage px-4 md:px-16 lg:px-24 py:24 mt-16 mb-8 '>
+        <div className="flex flex-col md:flex-col lg:flex-row-reverse gap-2 md:gap-5 lg:gap-10 items-center">
+          <div className='thirdpage-img w-full md:w-full lg:w-[50%]'>
             <Fade triggerOnce="true">
-            <img src={rabbit} className="object-cover w-full h-full md:h-[500px] rounded-xl mb-4" alt="chart" />
+            <img src={anim} className=" w-full md:w-full h-full md:h-[500px] object-cover rounded-xl mb-4" alt="chart" />
             </Fade>
           </div>
 
           {/* Overlay */}
           {/* <div class="absolute inset-0 flex mt-9 bg-black bg-opacity-40 md:h-[500px] object-cover rounded-xl"></div> */}
+          <div className="w-full md:w-full lg:w-[50%]">
+            {/* <div className="flex flex-col justify-start items-center gap-2"> */}
+              <div>
+                <Fade direction="down" triggerOnce="true">
+                <h1 className="text-2xl md:text-4xl text-left font-medium mb-4">Why Choose our <span className="font-bold text-primary">System?</span></h1>
+                </Fade>
+              </div>
 
-          <div className='thirdpage-words'>
-            <Fade direction="up" triggerOnce="true">
-              <h4 className="text-sm md:text-xl text-black text-justify font-normal">
-                We understand the critical importance of maintaining the health and well-being of your livestock. 
-                Our innovative health monitoring system uses real-time temperature tracking to ensure your animals 
-                are always at their best.
-              </h4>
-            </Fade>
+              <div className='thirdpage-words'>
+                <Fade direction="up" triggerOnce="true">
+                  <h4 className="text-sm md:text-lg text-black text-justify md:text-justify lg:text-left font-normal">
+                    We understand the critical importance of maintaining the health and well-being of your livestock. 
+                    Our innovative health monitoring system uses real-time temperature tracking to ensure your animals 
+                    are always at their best.
+                  </h4>
+                </Fade>
+              </div> 
+            {/* </div> */}
+            
           </div>
+          
         </div>  
       </div>
 
@@ -291,7 +298,7 @@ window.addEventListener('scroll', toggleVisible);
       {/* How it Works */}
       <div className='fifthpage px-4 py-6 md:px-16 lg:px-24 md:py-24 mt-24 mb-8 bg-fa'>
         <h1 className="text-2xl md:text-4xl font-medium text-center mb-4 md:mb-8">How it <span className=" text-primary font-bold">Works</span></h1>
-        <div className='fifthpage-grid grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10'>
+        <div className='fifthpage-grid grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5'>
           <div className='grid1 gap-2 w-full bg-white px-2 pt-2 py-4 rounded-md'>
             <Fade triggerOnce="true">
               <img src={grid1} alt="chart" className="mb-2 w-full"/>
