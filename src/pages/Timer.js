@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import "../fonts.css"
 
 const Timer = ({ initialSeconds, onComplete }) => {
   const [seconds, setSeconds] = useState(initialSeconds);
@@ -25,7 +26,7 @@ const Timer = ({ initialSeconds, onComplete }) => {
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
-  return <div>Time remaining: {formatTime(seconds)}</div>;
+  return <div className='font-custom'>Time remaining: {formatTime(seconds)}</div>;
 };
 
 export default Timer;

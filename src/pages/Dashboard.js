@@ -182,7 +182,7 @@ const Dashboard = () => {
               </div>
 
               {/* Stats */}
-              <div className="grid lg:grid-cols-2 sm:grid-cols-1 px-8 gap-5 mb-4">
+              <div className="grid lg:grid-cols-2 sm:grid-cols-1 px-4 md:px-8 gap-5 mb-4">
                 <div className="flex flex-col bg-primary rounded-md gap-1 pl-6 pr-20 py-6 text-white">
                   <div className="innerdashboardanimalcounttexts">
                     <img src={dogpaw} alt="img" />
@@ -205,7 +205,7 @@ const Dashboard = () => {
               </div> */}
 
 
-              <div className="Animalcharttable px-8">
+              <div className="Animalcharttable px-4 md:px-8">
                 <div className="Animalcharttable-top flex flex-row justify-between mb-4">
                   <div className="text-primary text-2xl font-semibold">Livestock</div>
                   <div className=" text-black2 text-md font-medium px-4">
@@ -230,7 +230,7 @@ const Dashboard = () => {
                 />
 
                 {/* Table */}
-                <table className="min-w-full border-collapse border border-disable px-8 py-4">
+                <table className="min-w-full border-collapse border border-disable px-4 md:px-8 py-4">
                   <thead className="bg-fa text-sm text-left">
                     <tr className="px-4 py-8">
                       <th className="px-6 py-6 text-black font-normal">ID</th>

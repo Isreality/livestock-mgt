@@ -74,12 +74,12 @@ const Signin = () => {
         <div className="flex flex-row gap-20 px-2">
           <div className="py-20 px-4 md:px-24 space-y-4 sm:m-12 lg:m-0 items-center rounded-lg">
             <div>
-              <form method="post" onSubmit={handleSignIn} className="grid justify-items-stretch text-left m-auto gap-2">
+              <form method="post" onSubmit={handleSignIn} className="grid justify-items-stretch text-left m-auto gap-5">
                 <img src={logo} alt="logo" className="w-[100px] md:w-[150px] object-cover"/>
-                <div className="signintop text-primary text-left text-3xl md:text-4xl font-black mb-0 md:mb-2">Login</div>
+                <div className="signintop text-primary text-left text-2xl md:text-4xl font-black mb-0 md:mb-2">Login</div>
                 
                 <div className="space-y-1 md:space-y-1 items-start">
-                  <label className='text-md md:text-md text-left'>Email</label>
+                  <label className='text-xs md:text-lg text-left'>Email</label>
                   <input
                     type="email"
                     name="email"
@@ -87,35 +87,35 @@ const Signin = () => {
                     onChange={handleChange}
                     placeholder="Enter Email Address"
                     // className={signInData.email ? "filled" : "border-2 p-4 text-md w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"}
-                    className="border-2 p-4 text-md w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
+                    className="border-2 p-4 text-xs md:text-lg w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
                   ></input>
-                </div><br/>
+                </div>
                   
                 <div className="space-y-1 md:space-y-1 items-start">
-                  <label className='text-md md:text-md text-left'>Password</label>
+                  <label className='text-xs md:text-lg lg:text-md text-left'>Password</label>
                   <input
                     type="password"
                     name="password"
                     value={signInData.password}
                     onChange={handleChange}
                     placeholder="Enter Password"
-                    className="border-2 p-4 text-md w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
+                    className="border-2 p-4 text-xs md:text-lg w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
                     // className={signInData.password ? "filled" : "border-2 p-4 text-md w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"}
                   ></input>
-                </div><br/>
+                </div>
                 
                 {/* Button */}
                 <button type="submit"
-                  className="signupbutton flex w-80 md:w-96 lg:w-full py-4 px-20 md:px-64 lg:px-64 rounded-md border-fa bg-primary cursor-pointer text-white text-md justify-center font-bold"
+                  className="signupbutton flex w-80 md:w-96 lg:w-full py-4 px-20 md:px-64 lg:px-64 rounded-md border-fa bg-primary cursor-pointer text-white text-xs md:text-lg justify-center font-bold"
                   disabled={loading}>
                     Sign In
                 </button>
 
                 {/* </Link> */}
-                <div className="signinbottom">
+                <div className="signinbottom text-xs md:text-lg">
                   Don't have an account?{" "}
                   <Link to="/signUp">
-                    <button className=" text-primary font-medium text-md">Sign-Up</button>
+                    <button className=" text-primary font-bold text-xs md:text-lg">Sign-Up</button>
                   </Link> 
                 </div>
               </form>

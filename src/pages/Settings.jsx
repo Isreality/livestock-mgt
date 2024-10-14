@@ -104,7 +104,7 @@ const Settings = () => {
             <div className="innerrightdashboardtop">
               <div className="mb-4 items-center"><Header title="Settings" link="/settings"/></div>
 
-              <div className="flex md:flex-row flex-col justify-between items-left md:items-center px-8 mb-4">
+              <div className="flex md:flex-row flex-col justify-between items-left md:items-center px-4 md:px-8 mb-4">
                 <div className="mb-4 text-left"><Heading title="Settings"/></div>
                   <div>
                     <Link to="/settings/updateprofile" className="flex flex-row items-center bg-primary py-4 px-6 text-white text-md text-center rounded-md gap-2">
@@ -121,28 +121,28 @@ const Settings = () => {
             </div>
 
             {/* Body */}
-            <div className="border border-white md:border-disable rounded-md px-0 md:px-10 py-2 md:py-8 mx-8">
+            <div className="border border-white md:border-disable rounded-md px-0 md:px-10 py-2 md:py-8 mx-4 md:mx-8">
                   <div className="gap-5 flex flex-col">
                       {/* Name */}
                       <div className="flex flex-row justify-between bg-fa p-4 lg:p-8 rounded-md cursor-pointer">
-                          <div className="flex flex-row md:flex-row items-center text-sm md:text-md gap-2 text-black2">
+                          <div className="flex flex-row md:flex-row items-center text-xs md:text-md gap-2 text-black2">
                             <img className="name-icon size-6 md:size-15" src="name.svg" alt="" />
                             <p className="text-black2 font-normal">Name</p>
                           </div>
 
-                          <div className="flex flex-row items-center text-sm md:text-md sm:ml-96 gap-3">
+                          <div className="flex flex-row items-center text-xs md:text-md sm:ml-96 gap-3">
                             <p className="text-black2 font-normal">{userProfile?.fullname}</p>
                           </div>
                       </div>
 
                       {/* Email */}
                       <div className="flex flex-row justify-between bg-fa p-4 lg:p-8 rounded-md cursor-pointer">
-                          <div className="flex flex-row items-center text-sm md:text-md gap-2 text-black2">
+                          <div className="flex flex-row items-center text-xs md:text-md gap-2 text-black2">
                               <img className="name-icon size-6 md:size-15" src="email.svg" alt="" />
                               <p className="text-black2 font-normal">Email</p>
                           </div>
 
-                          <div className="flex flex-row text-sm md:text-md items-center sm:ml-96 gap-3">
+                          <div className="flex flex-row text-xs md:text-md items-center sm:ml-96 gap-3">
                             <p className="text-black2 font-normal">{userProfile?.email}</p>
                           </div>
                       </div>

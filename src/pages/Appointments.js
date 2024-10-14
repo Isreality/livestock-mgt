@@ -98,13 +98,13 @@ const Appointments = () => {
           </div>
 
           {/* Body */}
-          <div className="border border-white md:border-disable rounded-md px-0 md:px-10 py-2 md:py-8 mx-8">
+          <div className="border border-white md:border-disable rounded-md px-0 md:px-10 py-2 md:py-8 mx-4 md:mx-8">
             <form className='space-y-4' onSubmit={handleSubmit}>
               {/* Email */}
               <div className='space-y-1 md:space-y-2 items-start text-left relative mb-2'>
-                <label htmlFor="email" className='text-md text-black2'>Email</label><br/>
+                <label htmlFor="email" className='text-xs md:text-md text-black2'>Email</label><br/>
                 <input 
-                  className='border p-4 w-full rounded-md border-disable bg-white focus:outline-disable text-black2' 
+                  className='border p-4 w-full rounded-md border-disable bg-white focus:outline-disable text-black2 text-xs md:text-md' 
                   type='text' 
                   id = "email" 
                   value={email}
@@ -115,19 +115,19 @@ const Appointments = () => {
 
               {/* Treatment */}
               <div className='space-y-1 md:space-y-2 items-start text-left relative mb-2'>
-                <label htmlFor="email" className='text-md text-black2'>Date of Treatment</label><br/>
+                <label htmlFor="email" className='text-xs md:text-md text-black2'>Date of Treatment</label><br/>
                 <DatePicker
                   selected={selectedDate}
                   onChange={(date) => setSelectedDate(date)}
                   placeholderText="yyyy/mm/dd"
-                  className="date-picker border p-4 w-full rounded-md border-disable bg-white focus:outline-disable text-black2"
+                  className="date-picker border p-4 w-full rounded-md border-disable bg-white focus:outline-disable text-black2 text-xs md:text-md"
                   dateFormat="yyyy/MM/dd"
                 />
               </div><br/>
 
               {/* Times slots */}
               <div className='space-y-1 md:space-y-2 items-start text-left relative mb-2'>
-                <label className='text-md text-black2'>Available Time slots <span className="text-primary">(Monday to Friday)</span></label><br/>
+                <label className='text-xs md:text-md text-black2'>Available Time slots <span className="text-primary">(Monday to Friday)</span></label><br/>
                 <div className="timeslots grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4 gap-2 ">
                     {appointmentTime.map((appointment, index) => (
                       <div
@@ -135,7 +135,7 @@ const Appointments = () => {
                         className={`timeslot ${appointment.id}`}
                         onClick={() => setTime(appointment.time)}
                       >
-                        <button type="button" className={time === appointment.time ? "selected bg-primary text-white px-8 py-4 rounded-md w-full" : "bg-fa hover:bg-primary text-black2 hover:text-white px-8 py-4 rounded-md w-full"}>
+                        <button type="button" className={time === appointment.time ? "selected bg-primary text-white text-xs md:text-md px-8 py-4 rounded-md w-full" : "bg-fa hover:bg-primary text-black2 text-xs md:text-md hover:text-white px-8 py-4 rounded-md w-full"}>
                           {appointment.time}
                         </button>
                       </div>
@@ -145,12 +145,12 @@ const Appointments = () => {
               
               {/* Reminder */}
               <div className='space-y-1 md:space-y-2 items-start text-left relative mb-2'>
-                <label className='text-md text-black2'>Reminder</label><br/> 
+                <label className='text-xs md:text-md text-black2'>Reminder</label><br/> 
                 <div className="reminder-dropdown-container">
                   <select
                     value={reminder}
                     onChange={handleReminderChange}
-                    className="reminder-dropdown block appearance-none border p-4 w-full rounded-md border-disable bg-white focus:outline-disable text-black2"
+                    className="reminder-dropdown block appearance-none border p-4 w-full rounded-md border-disable bg-white focus:outline-disable text-black2 text-xs md:text-md"
                   >
                     <option value="" disabled>
                       Set Reminder
@@ -170,18 +170,18 @@ const Appointments = () => {
 
               {/* Mode of meeting */}
               <div className='space-y-1 md:space-y-2 items-start text-left relative mb-2'>
-                <label className='text-md text-black2'>Mode of meeting</label><br/> 
+                <label className='text-xs md:text-md text-black2'>Mode of meeting</label><br/> 
                 <div className="reminder-dropdown-container flex flex-col md:flex-row gap-2">
                     <button
                       type="button"
-                      className={`mode ${mode === "Physical" ? "selected bg-primary text-white px-16 py-4 rounded-md" : "bg-fa hover:bg-primary text-black2 hover:text-white px-16 py-4 rounded-md"}`}
+                      className={`mode ${mode === "Physical" ? "selected bg-primary text-white text-xs md:text-md px-16 py-4 rounded-md" : "bg-fa hover:bg-primary text-black2 text-xs md:text-md hover:text-white px-16 py-4 rounded-md"}`}
                       onClick={() => setMode("Physical")}
                     >
                       Physical
                     </button>
                     <button
                       type="button"
-                      className={`mode ${mode === "Virtual" ? "selected bg-primary text-white px-16 py-4 rounded-md" : "bg-fa hover:bg-primary text-black2 hover:text-white px-16 py-4 rounded-md"}`}
+                      className={`mode ${mode === "Virtual" ? "selected bg-primary text-white text-xs md:text-md px-16 py-4 rounded-md" : "bg-fa hover:bg-primary text-black2 text-xs md:text-md hover:text-white px-16 py-4 rounded-md"}`}
                       onClick={() => setMode("Virtual")}
                     >
                       Virtual
@@ -190,7 +190,7 @@ const Appointments = () => {
               </div>
 
               <div className="grid justify-strecth md:justify-stretch lg:justify-end">
-                <button type="submit" className="submit-btn mt-4 w-full md:w-full py-4 px-20 rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-md font-medium" disabled={loading}>
+                <button type="submit" className="submit-btn mt-4 w-full md:w-full py-4 px-20 rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-xs md:text-md font-medium" disabled={loading}>
                         {loading ? (
                           <ThreeDots
                             height="10"

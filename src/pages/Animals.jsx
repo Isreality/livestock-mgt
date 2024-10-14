@@ -156,7 +156,7 @@ const Animals = () => {
           <div className="Animalstopleft">
             <div className="mb-4 items-center"><Header title="Animals" link="/animals"/></div>
 
-            <div className="animalhealthtop flex flex-row justify-between items-center px-8">
+            <div className="animalhealthtop flex flex-row justify-between items-center px-4 md:px-8">
               <div className="">
                 <div className="mb-4"><Heading title="Animals"/></div>
               </div> 
@@ -215,8 +215,8 @@ const Animals = () => {
               />
             </div><br/>
 
-            <div className="mx-8">
-              <table className="min-w-full border-collapse border border-disable px-8 py-4">
+            <div className="mx-4 md:mx-8">
+              <table className="min-w-full border-collapse border border-disable px-8 py-4 sm:overflow-x-auto">
                 <thead className="bg-fa text-sm text-left">
                   <tr className="px-4 py-8">
                     <th className="px-6 py-6 text-black font-normal">ID</th>

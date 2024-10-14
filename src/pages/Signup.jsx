@@ -102,12 +102,12 @@ const Signup = () => {
           <div className="py-20 px-4 md:px-24 space-y-4 sm:m-12 lg:m-0 items-center rounded-lg">
             <div>
               {/* Form */}
-              <form onSubmit={handleSignUp} method="" className="grid justify-items-stretch text-left m-auto gap-2">
+              <form onSubmit={handleSignUp} method="" className="grid justify-items-stretch text-left m-auto gap-5">
                 <img src={logo} alt="logo" className="w-[100px] md:w-[150px] object-cover"/>
-                <div className="signuptop text-primary text-left text-3xl md:text-4xl font-black mb-0 md:mb-2">Create an account</div>
+                <div className="signuptop text-primary text-left text-2xl md:text-4xl font-black mb-0 md:mb-2">Create an account</div>
                 {/* Name */}
                 <div className="space-y-1 md:space-y-1 items-start">
-                  <label className='text-md md:text-md text-left'>Name</label> 
+                  <label className='text-xs md:text-lg text-left'>Name</label> 
                     <input
                       type=" text"
                       placeholder="Enter Full Name"
@@ -115,13 +115,13 @@ const Signup = () => {
                       value={signUpData.fullname}
                       onChange={handleChange}
                       // className={signUpData.fullname ? "filled" : ""}
-                      className="border-2 p-4 text-md w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
+                      className="border-2 p-4 text-xs md:text-lg w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
                     /> 
-                </div><br/>
+                </div>
 
                 {/* Email */}
                 <div className="space-y-1 md:space-y-1 items-start">
-                  <label className='text-md md:text-md text-left'>Email </label>
+                  <label className='text-xs md:text-lg text-left'>Email </label>
                   <input
                     type="email"
                     placeholder="Enter Email Address"
@@ -129,13 +129,13 @@ const Signup = () => {
                     value={signUpData.email}
                     onChange={handleChange}
                     // className={signUpData.email ? "filled" : ""}
-                    className="border-2 p-4 text-md w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
+                    className="border-2 p-4 text-xs md:text-lg w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
                   />
-                </div><br/>
+                </div>
                   
                 {/* Password */}
                 <div className="space-y-1 md:space-y-1 items-start">
-                  <label className='text-md md:text-md text-left'>Password</label>
+                  <label className='text-xs md:text-lg text-left'>Password</label>
                   <input
                     type="password"
                     placeholder="Enter Password"
@@ -144,13 +144,13 @@ const Signup = () => {
                     value={signUpData.password}
                     onChange={handleChange}
                     // className={signUpData.password ? "filled" : ""}
-                    className="border-2 p-4 text-md w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
+                    className="border-2 p-4 text-xs md:text-lg w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
                   />
-                </div><br/>
+                </div>
 
                 {/* Confirm Password */}
                 <div className="space-y-1 md:space-y-1 items-start">
-                  <label className='text-md md:text-md text-left'>Confirm Password</label>
+                  <label className='text-xs md:text-lg text-left'>Confirm Password</label>
                   <input
                     type="password"
                     placeholder="Re-Enter Password"
@@ -159,20 +159,20 @@ const Signup = () => {
                     value={signUpData.confirmPassword}
                     onChange={handleChange}
                     // className={signUpData.password ? "filled" : ""}
-                    className="border-2 p-4 text-md w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
+                    className="border-2 p-4 text-xs md:text-lg w-80 md:w-full rounded-md border-fa bg-fa focus:outline-primary focus:bg-fa"
                   />
-                </div><br/>                        
+                </div>                       
 
                 {/* Button */}
                 <button type="submit"
-                  className="flex w-80 md:w-full py-4 px-20 md:px-60 rounded-md border-fa bg-primary cursor-pointer text-white text-md justify-center font-medium"
+                  className="flex w-80 md:w-full py-4 px-20 md:px-60 rounded-md border-fa bg-primary cursor-pointer text-white text-xs md:text-lg justify-center font-medium"
                   disabled={loading}>
                     Sign Up
                 </button>
 
-                <div className=" flex flex-row items-center gap-2 text-center text-md">
+                <div className=" flex flex-row items-center gap-2 text-center text-xs md:text-lg">
                   Already have an account?{" "}
-                  <Link to="/signin" className=" text-primary font-medium text-md">
+                  <Link to="/signin" className=" text-primary font-bold text-xs md:text-lg">
                     {/* <button type="button" > */}
                       Sign In
                     {/* </button> */}
