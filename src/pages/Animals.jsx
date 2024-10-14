@@ -156,11 +156,11 @@ const Animals = () => {
           <div className="Animalstopleft">
             <div className="mb-4 items-center"><Header title="Animals" link="/animals"/></div>
 
-            <div className="animalhealthtop flex flex-row justify-between items-center px-4 md:px-8">
+            <div className="animalhealthtop flex flex-col md:flex-row justify-start md:justify-between md:items-center px-4 md:px-8">
               <div className="">
                 <div className="mb-4"><Heading title="Animals"/></div>
               </div> 
-              <div className="animalhealth flex flex-row gap-2">
+              <div className="animalhealth flex flex-col md:flex-row gap-2">
                 <div className="Animalsearchbar">
                   <input
                     type="text"
@@ -168,12 +168,12 @@ const Animals = () => {
                     value={searchTerm}
                     onChange={handleChange}
                     onKeyDown={handleKeyPress}
-                    className="p-4 text-sm text-black2 border border-f2 rounded focus:bg-white focus:outline-primary"
+                    className="p-4 text-sm text-black2 border border-f2 rounded w-full focus:bg-white focus:outline-primary"
                   />
                 </div>
 
                 <div className='relative'>
-                  <select id="Health-Status" onChange={handleFilterAnimalData} className="block appearance-none py-4 px-8 text-sm text-black2 bg-fa rounded focus:outline-primary cursor-pointer">
+                  <select id="Health-Status" onChange={handleFilterAnimalData} className="block appearance-none w-full py-4 px-8 text-sm text-black2 bg-fa rounded focus:outline-primary cursor-pointer">
                     <option value="all">Health Status</option>
                     <option value="all">All</option>
                     <option value="healthy">Healthy</option>

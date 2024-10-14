@@ -189,9 +189,9 @@ const UpdataProfile = () => {
             <form className='space-y-4' onSubmit={handleSubmitName}>
                       {/* Full Name */}
                       <div className='space-y-1 md:space-y-2 items-start text-left relative mb-2'>
-                        <label htmlFor="name" className='text-xs md:text-md text-black2'>Full Name</label><br/>
+                        <label htmlFor="name" className='text-xs md:text-base text-black2'>Full Name</label><br/>
                         <input 
-                            className='border p-4 w-full rounded-md border-disable bg-white focus:outline-disable text-black2 text-xs md:text-md' 
+                            className='border p-4 w-full rounded-md border-disable bg-white focus:outline-disable text-black2 text-xs md:text-base' 
                             type='text' 
                             id = "name" 
                             // placeholder='example@gmail.com'
@@ -202,9 +202,9 @@ const UpdataProfile = () => {
 
                       {/*Email*/}
                       <div className='space-y-1 md:space-y-2 items-start text-left'>
-                        <label htmlFor="email" className='text-xs md:text-md text-black2'>Email</label><br/>
+                        <label htmlFor="email" className='text-xs md:text-base text-black2'>Email</label><br/>
                         <input 
-                            className='border p-4 w-full rounded-md border-disable bg-white focus:outline-disable text-black2 text-xs md:text-md' 
+                            className='border p-4 w-full rounded-md border-disable bg-white focus:outline-disable text-black2 text-xs md:text-lg' 
                             type='email' 
                             id = "email" 
                             // placeholder='example@gmail.com'
@@ -215,7 +215,7 @@ const UpdataProfile = () => {
 
                       {/* Submit Button */}
                       <div className="grid justify-items-end">
-                        <button type="submit"  className='mt-4 w-full md:w-full lg:w-64 py-4 px-20 rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-xs md:text-md font-medium'>
+                        <button type="submit"  className='mt-4 w-full md:w-full lg:w-64 py-4 px-20 rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-xs md:text-base font-medium'>
                           {/* {spin ? <div className="px-2 text-md"><FaSpinner className="animate-spin" /> </div> : 'Update'} */}
                           {loading ? (
                             <ThreeDots
@@ -246,9 +246,9 @@ const UpdataProfile = () => {
                     
                     {/* Current Password */}
                     <div className='space-y-2' style={{ position: 'relative' }}>
-                      <label htmlFor="current_password" className='text-xs md:text-md text-left mb-8'>Enter Current Password</label><br/>
+                      <label htmlFor="current_password" className='text-xs md:text-base text-left mb-8'>Enter Current Password</label><br/>
                       <input
-                        className="edit-input border p-6 w-full md:w-full text-xs md:text-md rounded-md border-fa bg-white focus:bg-white focus:outline-fa"
+                        className="edit-input border p-6 w-full md:w-full text-xs md:text-base rounded-md border-fa bg-white focus:bg-white focus:outline-fa"
                         type={showPassword ? "text" : "password"}
                         id="previous-password"
                         value={previousPassword}
@@ -275,11 +275,11 @@ const UpdataProfile = () => {
                     
                     {/* New Password */}
                     <div className='space-y-2' style={{ position: 'relative' }}>
-                      <label htmlFor="new_password" className='text-xs md:text-md text-left mb-8'>Enter New Password</label><br/>
+                      <label htmlFor="new_password" className='text-xs md:text-base text-left mb-8'>Enter New Password</label><br/>
                       <input
                         type={showPassword ? "text" : "password"}
                         id="new-password"
-                        className="edit-input border p-6 w-full md:w-full rounded-md text-xs md:text-md border-fa bg-white focus:bg-white focus:outline-fa"
+                        className="edit-input border p-6 w-full md:w-full rounded-md text-xs md:text-base border-fa bg-white focus:bg-white focus:outline-fa"
                         value={newPassword}
                         onChange={handleNewPasswordChange}
                         placeholder='Enter new password'
@@ -304,10 +304,10 @@ const UpdataProfile = () => {
 
                     {/* Re-enter Password */}
                     <div className='space-y-2' style={{ position: 'relative' }}>
-                      <label htmlFor="new_password_confirmation" className='text-xs md:text-md text-left mb-8'>Confirm New Password</label><br/>
+                      <label htmlFor="new_password_confirmation" className='text-xs md:text-base text-left mb-8'>Confirm New Password</label><br/>
                       <input
                         type={showPassword ? "text" : "password"}
-                        className="edit-input border p-6 w-full md:w-full rounded-md text-xs md:text-md border-fa bg-white focus:bg-white focus:outline-fa"
+                        className="edit-input border p-6 w-full md:w-full rounded-md text-xs md:text-base border-fa bg-white focus:bg-white focus:outline-fa"
                         id="confirm-password"
                         value={confirmPassword}
                         onChange={handleConfirmPasswordChange}
@@ -333,7 +333,7 @@ const UpdataProfile = () => {
 
                     <div className="grid justify-items-end">    
                       {/* <button type="submit" className='mt-4 w-full md:w-64 py-4 px-20  rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-md font-medium'> */}
-                      <button type="submit" className="update-button mt-4 w-full md:w-full lg:w-64 py-4 px-20  rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-xs md:text-md font-medium">
+                      <button type="submit" className="update-button mt-4 w-full md:w-full lg:w-64 py-4 px-20  rounded-md border-fa bg-primary hover:bg-black cursor-pointer text-white text-xs md:text-base font-medium">
                         {loading ? (
                           <ThreeDots
                             type="ThreeDots"
