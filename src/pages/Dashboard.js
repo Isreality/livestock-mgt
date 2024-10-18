@@ -166,7 +166,7 @@ const Dashboard = () => {
   return (
     <div className="Dashboard font-custom">
       <div className="main flex flex-row">
-        <Sidebar/>
+        <div className="bg-none md:bg-none lg:bg-primary"><Sidebar/></div>
         
         <div className="rightdashboard w-full">
           {view === "dashboard" && (

@@ -64,7 +64,7 @@ const Sidebar = () => {
                             </div><br/><br/><br/>
 
                             {/* Logout */}   
-                            <button type="submit" className="flex flex-row justify-items-center mb-4 pl-4 py-4 gap-3 cursor-pointer text-sm text-white hover:text-white hover:bg-secondary font-normal  hover:rounded-md hover:border-primary">
+                            <button type="submit" onClick={openModal} className="flex flex-row justify-items-center mb-4 pl-4 py-4 gap-3 cursor-pointer text-sm text-white hover:text-white hover:bg-secondary font-normal  hover:rounded-md hover:border-primary">
                                 <TbLogout className="h-5 w-5"/>
                                 <p >Logout</p>
                             </button>
@@ -95,7 +95,7 @@ const Sidebar = () => {
                                     </div><br/>
             
                                     {/* Logout */}   
-                                    <button type="submit" className="flex flex-row justify-items-center mb-4 pl-4 py-4 gap-3 cursor-pointer text-sm text-black2 hover:text-black2 hover:bg-disable font-normal  hover:rounded-md hover:border-primary">
+                                    <button type="submit" onClick={openModal} className="flex flex-row justify-items-center mb-4 pl-4 py-4 gap-3 cursor-pointer text-sm text-black2 hover:text-black2 hover:bg-disable font-normal  hover:rounded-md hover:border-primary">
                                         <TbLogout className="h-5 w-5"/>
                                         <p>Logout</p>
                                     </button>    

@@ -94,7 +94,7 @@ const Settings = () => {
   return (
     <div className="font-custom">
       <div className="flex flex-row">
-        <Sidebar/>
+        <div className="bg-none md:bg-none lg:bg-primary"><Sidebar/></div>
 
         <div className="w-full">
           {view === "settings" && (

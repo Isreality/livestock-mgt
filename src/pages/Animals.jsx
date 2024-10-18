@@ -151,7 +151,7 @@ const Animals = () => {
   return (
     <div className="Animals font-custom">
       <div className="innerrightAnimalstop flex flex-row">
-        <Sidebar/>
+        <div className="bg-none md:bg-none lg:bg-primary"><Sidebar/></div>
         <div className="w-full"> 
           <div className="Animalstopleft">
             <div className="mb-4 items-center"><Header title="Animals" link="/animals"/></div>

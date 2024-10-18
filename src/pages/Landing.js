@@ -134,7 +134,7 @@ window.addEventListener('scroll', toggleVisible);
       
       {/* Hero Section */}
       <div className='firstpage px-4 md:px-10 lg:px-16 mb-4'>
-        <div className="flex flex-col md:flex-row lg:flex-row gap-2 justify-between items-center">
+        <div className="flex flex-col md:flex-row lg:flex-row gap-4 md:gap-2 justify-between items-center">
           <div className='firstpage-left '>
             <div className="flex flex-row gap-1 justify-center md:justify-start mb-2">
               <Fade direction="down" triggerOnce="true">
@@ -206,7 +206,7 @@ window.addEventListener('scroll', toggleVisible);
       </div>
 
       {/* WHy Choose our system */}
-      <div id='thirdpage' className='thirdpage px-4 md:px-16 lg:px-24 py:24 mt-16 mb-8 '>
+      <div id='thirdpage' className='thirdpage px-4 md:px-16 lg:px-24 py:24 mt-16 mb-8'>
         <div className="flex flex-col md:flex-col lg:flex-row-reverse gap-2 md:gap-5 lg:gap-10 items-center">
           <div className='thirdpage-img w-full md:w-full lg:w-[50%]'>
             <Fade direction="right" triggerOnce="true">
