@@ -20,8 +20,8 @@ function Logout ({ show, handleClose }) {
         <div className="font-custom">
           {show && (
               <div className="fixed inset-0 flex justify-center items-center z-80">
-                  <div className="absolute inset-0 bg-black opacity-50 h-screen"></div>
-                      <div className="relative bg-white rounded-lg w-3/4 max-w-lg py-8 px-4 lg:px-16 z-10 max-h-screen">
+                  <div className="absolute inset-0 bg-black opacity-50 h-screen z-80"></div>
+                      <div className="relative bg-white rounded-lg w-3/4 max-w-lg py-8 px-4 lg:px-16 z-80 max-h-screen">
                           <button
                           className="absolute top-0 right-0 m-4 bg-disable rounded-full text-gray-600 text-2xl hover:text-gray-800 w-10 h-10"
                           onClick={handleClose}>

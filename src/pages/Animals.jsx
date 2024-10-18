@@ -215,8 +215,9 @@ const Animals = () => {
               />
             </div><br/>
 
-            <div className="mx-4 md:mx-8">
-              <table className="min-w-full border-collapse border border-disable px-8 py-4 sm:overflow-x-auto">
+            {/* Desktop Table */}
+            <div className="mx-4 md:mx-8 hidden md:block">
+              <table className=" min-w-full border-collapse border border-disable px-8 py-4 sm:overflow-x-auto">
                 <thead className="bg-fa text-sm text-left">
                   <tr className="px-4 py-8">
                     <th className="px-6 py-6 text-black font-normal">ID</th>
@@ -248,7 +249,36 @@ const Animals = () => {
                 </tbody>
               </table> 
             </div>
-             
+
+            {/* Mobile Table */}
+             <div className="block md:hidden w-full border border-disable">
+                {animalData?.map((animal, index) => (
+                    <div className="flex flex-row px-4 py-4 justify-between border-b border-disable items-center">
+                      {/* Left side */}
+                      <div className="flex flex-col text-sm text-left text-black2 font-normal gap-1">
+                        <p className="">{animal?.specie}</p>
+                        <p className="">{animal?.status}</p>
+                      </div>
+
+                      {/* Right side */}
+                      <div className="flex items-center gap-3">
+                        <div className="text-sm text-right text-black2 font-normal gap-2">
+                          <p className="">{animal?.temperature}°C</p>
+                          <p className="">{animal?.last_treatment}</p>
+                        </div>
+                        <div>
+                          <ActionButton
+                          onView={() => handleOpenViewModal({ animal })}
+                          onEdit={() => handleOpenEditModal({ animal })}
+                          onDelete={() => handleDelete(animal?.animalid)}
+                        />
+                        </div>
+                        
+                      </div>
+                    </div>
+                    
+                 ))}  
+             </div>
 
           </div>
 

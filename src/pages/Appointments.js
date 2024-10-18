@@ -101,7 +101,7 @@ const Appointments = () => {
           <div className="border border-white md:border-disable rounded-md px-0 md:px-10 py-2 md:py-8 mx-4 md:mx-8">
             <form className='space-y-4' onSubmit={handleSubmit}>
               {/* Email */}
-              <div className='space-y-1 md:space-y-2 items-start text-left relative mb-2'>
+              <div className='space-y-1 md:space-y-2 items-start text-left mb-2'>
                 <label htmlFor="email" className='text-xs md:text-base text-black2'>Email</label><br/>
                 <input 
                   className='border p-4 w-full rounded-md border-disable bg-white focus:outline-disable text-black2 text-xs md:text-base' 
@@ -114,7 +114,7 @@ const Appointments = () => {
               </div>
 
               {/* Treatment */}
-              <div className='space-y-1 md:space-y-2 items-start text-left relative mb-2'>
+              <div className='space-y-1 md:space-y-2 items-start text-left mb-2'>
                 <label htmlFor="email" className='text-xs md:text-base text-black2'>Date of Treatment</label><br/>
                 <DatePicker
                   selected={selectedDate}
@@ -126,7 +126,7 @@ const Appointments = () => {
               </div><br/>
 
               {/* Times slots */}
-              <div className='space-y-1 md:space-y-2 items-start text-left relative mb-2'>
+              <div className='space-y-1 md:space-y-2 items-start text-left mb-2'>
                 <label className='text-xs md:text-base text-black2'>Available Time slots <span className="text-primary">(Monday to Friday)</span></label><br/>
                 <div className="timeslots grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4 gap-2 ">
                     {appointmentTime.map((appointment, index) => (
@@ -169,7 +169,7 @@ const Appointments = () => {
               </div>
 
               {/* Mode of meeting */}
-              <div className='space-y-1 md:space-y-2 items-start text-left relative mb-2'>
+              <div className='space-y-1 md:space-y-2 items-start text-left mb-2'>
                 <label className='text-xs md:text-base text-black2'>Mode of meeting</label><br/> 
                 <div className="reminder-dropdown-container flex flex-col md:flex-row gap-2">
                     <button

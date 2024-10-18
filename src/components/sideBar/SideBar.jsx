@@ -75,7 +75,7 @@ const Sidebar = () => {
                     
                     {/* Side Toggle */}
                     <div className="lg:hidden">    
-                            <button onClick={()=>toggleNavbar(true)} className="">{side ? <MdClose className="text-black bg-disable p-2 size-8 rounded-full absolute top-15 right-20 md:left-50 z-50 cursor-pointer"/> : <GiHamburgerMenu className="text-primary font-black absolute top-6 md:top-4 size-5 mr-4 left-2"/>}</button>
+                            <button onClick={()=>toggleNavbar(true)} className="">{side ? <MdClose className="text-black bg-disable p-2 size-8 rounded-full absolute top-15 md:top-2 right-20 md:left-2 z-50 cursor-pointer"/> : <GiHamburgerMenu className="text-primary font-black absolute top-6 md:top-4 size-5 mr-4 left-2"/>}</button>
                             {side &&(
                             <div className="sticky h-full w-screen md:w-60 left-0 top-0 -translate-x-0 transition-all px-4">
                                 <div className="flex bg-white  flex-col right-0 top-0 p-2 gap-5 z-[100] w-56 ">
