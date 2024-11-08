@@ -231,7 +231,7 @@ const Dashboard = () => {
 
                 {/* Desktop Table */}
                 <div className="mx-4 md:mx-4 hidden md:block">
-                  <table className="min-w-full border-collapse border border-disable px-4 md:px-8 py-4">
+                  <table className="min-w-full border-collapse border border-disable px-4 md:px-4 py-4">
                     <thead className="bg-fa text-sm text-left">
                       <tr className="px-4 py-8">
                         <th className="px-6 py-6 text-black font-normal">ID</th>
