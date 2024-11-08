@@ -230,35 +230,37 @@ const Dashboard = () => {
                 />
 
                 {/* Desktop Table */}
-                <table className="hidden md:block min-w-full border-collapse border border-disable px-4 md:px-8 py-4">
-                  <thead className="bg-fa text-sm text-left">
-                    <tr className="px-4 py-8">
-                      <th className="px-6 py-6 text-black font-normal">ID</th>
-                      <th className="px-4 py-6 text-black font-normal">Specie</th>
-                      <th className="px-4 py-6 text-black font-normal">Status</th>
-                      <th className="px-4 py-6 text-black font-normal">Last Treatment</th>
-                      <th className="px-4 py-6 text-black font-normal">Action</th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    {dashboardData?.animals?.slice(0, 3).map((animal, index) => (
-                      <tr key={index} className="text-black2 text-sm text-left items-center border-b border-disable px-4 py-8">
-                        <td className="px-6 py-6">{index + 1}</td>
-                        <td className="px-4 py-6">{animal?.specie}</td>
-                        <td className="px-4 py-6">{animal?.status}</td>
-                        <td className="px-4 py-6">{animal?.last_treatment}</td>
-                        <td className="px-6">
-                          <ActionButton
-                            onView={() => handleOpenViewModal(animal)}
-                            onEdit={() => handleOpenEditModal(animal)}
-                            onDelete={() => handleDelete(animal?.animalid)}
-                          />
-                        </td>
+                <div className="mx-4 md:mx-8 hidden md:block">
+                  <table className="min-w-full border-collapse border border-disable px-4 md:px-8 py-4">
+                    <thead className="bg-fa text-sm text-left">
+                      <tr className="px-4 py-8">
+                        <th className="px-6 py-6 text-black font-normal">ID</th>
+                        <th className="px-4 py-6 text-black font-normal">Specie</th>
+                        <th className="px-4 py-6 text-black font-normal">Status</th>
+                        <th className="px-4 py-6 text-black font-normal">Last Treatment</th>
+                        <th className="px-4 py-6 text-black font-normal">Action</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+
+                    <tbody>
+                      {dashboardData?.animals?.slice(0, 3).map((animal, index) => (
+                        <tr key={index} className="text-black2 text-sm text-left items-center border-b border-disable px-4 py-8">
+                          <td className="px-6 py-6">{index + 1}</td>
+                          <td className="px-4 py-6">{animal?.specie}</td>
+                          <td className="px-4 py-6">{animal?.status}</td>
+                          <td className="px-4 py-6">{animal?.last_treatment}</td>
+                          <td className="px-6">
+                            <ActionButton
+                              onView={() => handleOpenViewModal(animal)}
+                              onEdit={() => handleOpenEditModal(animal)}
+                              onDelete={() => handleDelete(animal?.animalid)}
+                            />
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
 
                 {/* Mobile Table */}
                 <div className="block md:hidden w-full border border-disable">
